@@ -1,25 +1,11 @@
 import Image from "next/image";
-import About from "./components/about";
 import DotField from "./components/DotField";
+import link from "next/link";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="relative min-h-screen">
-      <nav className="absolute left-1/2 top-6 z-10 flex -translate-x-1/2 rounded-full bg-[#dce2ed] p-2">
-        <a href="#home" className="rounded-full bg-[#3565a0] px-5 py-2 font-bold text-white">
-          Home
-        </a>
-        <a href="#about" className="px-5 py-2 font-bold text-[#587fba]">
-          About
-        </a>
-        <a href="#project" className="px-5 py-2 font-bold text-[#587fba]">
-          Project
-        </a>
-        <a href="#contact" className="px-5 py-2 font-bold text-[#587fba]">
-          Contact
-        </a>
-      </nav>
-
       <section id="home" className="grid min-h-screen grid-cols-2">
         {/* LEFT SIDE (Original untouched) */}
         <div className="relative isolate flex flex-col overflow-hidden justify-center bg-[#587fba] px-14 text-white">
@@ -289,9 +275,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* About Section */}
-      <About />
     </main>
   );
 }
