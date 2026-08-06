@@ -1,9 +1,10 @@
 import { Coffee, Sprout, Handshake } from "lucide-react";
-import image from "next/image";
+import Image from "next/image";
 
 export default function About() {
     return (
-        <main className="min-h-screen bg-blue-50 grid grid-cols-2 px-10 py-32 items-start">
+        <main className="min-h-screen bg-blue-50 px-10 py-32 items-start">
+            <section id="about" className="grid min-h-screen grid-cols-2">
             <div className="relative z-10 mx-auto w-full max-w-[560px]">
                 <h1 className="w-fit border-2 border-[#3565a0] p-3 rounded-2xl text-xl font-semibold text-[#3565a0]">
                     About Me
@@ -75,6 +76,19 @@ export default function About() {
                     </div>
                 </div>
             </div>
+            
+            <div className="mx-auto self-start pt-16">
+                <div className="relative h-[650px] w-[560px]">
+                    <Image
+                    src="/reje.jpg"
+                    alt="Foto Yoga about"
+                    fill
+                    className="rounded-3xl object-cover"
+
+                    />
+                </div>
+                </div>
+            </section>
         </main>
     )
 }
