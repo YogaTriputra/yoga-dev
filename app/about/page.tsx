@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function About() {
     return (
-        <main className="min-h-screen bg-blue-50 px-10 py-32 items-start">
-            <section id="about" className="grid min-h-screen grid-cols-2">
+        <main className="min-h-screen bg-blue-50">
+            <section id="about" className="grid min-h-screen grid-cols-2 px-10 py-32">
             <div className="relative z-10 mx-auto w-full max-w-[560px]">
                 <h1 className="w-fit border-2 border-[#3565a0] p-3 rounded-2xl text-xl font-semibold text-[#3565a0]">
                     About Me
@@ -83,10 +83,24 @@ export default function About() {
                     src="/reje.jpg"
                     alt="Foto Yoga about"
                     fill
-                    className="rounded-3xl object-cover"
-
-                    />
+                    className="rounded-3xl object-cover"/>
                 </div>
+                </div>
+            </section>
+
+            <section className="grid min-h-screen bg-[#3565a0] px-10 grid-cols-2">
+                <div className="mx-auto flex min-h-screen w-full max-w-[560px] flex-col justify-center">
+                    <h1 className="text-white text-xl font-semibold">
+                        Discover my Portofolio
+                    </h1>
+
+                    <h1 className="text-white text-6xl font-extrabold mt-5">
+                        Discover More <br/> <span className="inline-block rounded-2xl px-3 py-2 bg-white text-[#3565a0] mt-3">About Me</span>
+                    </h1>
+
+                    <p className="mt-5 text-white max-w-[400px]">
+                        Each section opens a new story about my journey, skills, and passions.
+                    </p>
                 </div>
             </section>
         </main>
