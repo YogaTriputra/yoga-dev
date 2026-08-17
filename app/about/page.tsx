@@ -1,5 +1,6 @@
-import { Coffee, Sprout, Handshake } from "lucide-react";
+import { Coffee, Sprout, Handshake, Star, ArrowRight} from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
     return (
@@ -34,7 +35,7 @@ export default function About() {
 
                         <div className="max-w-[400px]">
                             <h2 className="text-lg font-bold text-slate-700">
-                                Coffee & Code
+                                Coffee &amp; Code
                             </h2>
 
                             <p className="mt-1 text-base text-slate-600">
@@ -88,7 +89,7 @@ export default function About() {
                 </div>
             </section>
 
-            <section className="grid min-h-screen bg-[#3565a0] px-10 grid-cols-2">
+            <section className="grid min-h-screen bg-[#3565a0] px-10 grid-cols-2 items-center">
                 <div className="mx-auto flex min-h-screen w-full max-w-[560px] flex-col justify-center">
                     <h1 className="text-white text-xl font-semibold">
                         Discover my Portofolio
@@ -102,6 +103,131 @@ export default function About() {
                         Each section opens a new story about my journey, skills, and passions.
                     </p>
                 </div>
+
+                {/* bagian kanan */}
+                <div className="mx-auto w-full max-w-xl space-y-15">
+                    <div className="flex items-center gap-5">
+                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full shadow-[-4px_4px_0_#111827] bg-white text-lg font-bold text-black">
+                            1
+                        </span>
+
+                        <Link href="/about/introduction" className="flex flex-1 items-center border-l-8 border-slate-900 bg-white px-3 py-4 text-slate-900 shadow-[0_5px_0_#111827] transition hover:translate-x-1 hover:bg-blue-900 hover:text-white">
+                            <span className="mr-3 flex h-8 w-8 shrink-0 items-center justify-center bg-[#3565a0] text-white">
+                                <Star className="h-4 w-4"/>
+                            </span>
+
+                            <span className="flex-1">
+                                <span className="block text-lg font-extrabold uppercase leading-none">
+                                    Introduction
+                                </span>
+
+                                <span className="mt-1 block text-xs leading-none">
+                                    Get to Know Better
+                                </span>
+                            </span>
+
+                            <ArrowRight className="h-5 w-5 shrink-0"/>
+                        </Link>
+                    </div>
+
+                    <div className="flex items-center gap-5">
+                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full shadow-[-4px_4px_0_#111827] bg-white text-lg font-bold text-black">
+                            2
+                        </span>
+
+                        <a href="#experience" className="flex flex-1 items-center border-l-8 border-slate-900 bg-white px-3 py-4 text-slate-900 shadow-[0_5px_0_#111827] transition hover:translate-x-1 hover:bg-blue-900 hover:text-white">
+                            <span className="mr-3 flex h-8 w-8 shrink-0 items-center justify-center bg-[#3565a0] text-white">
+                                <Star className="h-4 w-4"/>
+                            </span>
+
+                            <span className="flex-1">
+                                <span className="block text-lg font-extrabold uppercase leading-none">
+                                    My Journew
+                                </span>
+
+                                <span className="mt-1 block text-xs leading-none">
+                                    My path and experience
+                                </span>
+                            </span>
+
+                            <ArrowRight className="h-5 w-5 shrink-0"/>
+                        </a>
+                    </div>
+
+                    <div className="flex items-center gap-5">
+                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full shadow-[-4px_4px_0_#111827] bg-white text-lg font-bold text-black">
+                            3
+                        </span>
+
+                        <a href="#experience" className="flex flex-1 items-center border-l-8 border-slate-900 bg-white px-3 py-4 text-slate-900 shadow-[0_5px_0_#111827] transition hover:translate-x-1 hover:bg-blue-900 hover:text-white">
+                            <span className="mr-3 flex h-8 w-8 shrink-0 items-center justify-center bg-[#3565a0] text-white">
+                                <Star className="h-4 w-4"/>
+                            </span>
+
+                            <span className="flex-1">
+                                <span className="block text-lg font-extrabold uppercase leading-none">
+                                    What I Do
+                                </span>
+
+                                <span className="mt-1 block text-xs leading-none">
+                                    What I Love to Build
+                                </span>
+                            </span>
+
+                            <ArrowRight className="h-5 w-5 shrink-0"/>
+                        </a>
+                    </div>
+
+                    <div className="flex items-center gap-5">
+                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full shadow-[-4px_4px_0_#111827] bg-white text-lg font-bold text-black">
+                            4
+                        </span>
+
+                        <a href="#experience" className="flex flex-1 items-center border-l-8 border-slate-900 bg-white px-3 py-4 text-slate-900 shadow-[0_5px_0_#111827] transition hover:translate-x-1 hover:bg-blue-900 hover:text-white">
+                            <span className="mr-3 flex h-8 w-8 shrink-0 items-center justify-center bg-[#3565a0] text-white">
+                                <Star className="h-4 w-4"/>
+                            </span>
+
+                            <span className="flex-1">
+                                <span className="block text-lg font-extrabold uppercase leading-none">
+                                    Tech Stack
+                                </span>
+
+                                <span className="mt-1 block text-xs leading-none">
+                                    Technologies I Use
+                                </span>
+                            </span>
+
+                            <ArrowRight className="h-5 w-5 shrink-0"/>
+                        </a>
+                    </div>
+
+                    <div className="flex items-center gap-5">
+                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full shadow-[-4px_4px_0_#111827] bg-white text-lg font-bold text-black">
+                            5
+                        </span>
+
+                        <a href="#experience" className="flex flex-1 items-center border-l-8 border-slate-900 bg-white px-3 py-4 text-slate-900 shadow-[0_5px_0_#111827] transition hover:translate-x-1 hover:bg-blue-900 hover:text-white">
+                            <span className="mr-3 flex h-8 w-8 shrink-0 items-center justify-center bg-[#3565a0] text-white">
+                                <Star className="h-4 w-4"/>
+                            </span>
+
+                            <span className="flex-1">
+                                <span className="block text-lg font-extrabold uppercase leading-none">
+                                    Beyond Coding
+                                </span>
+
+                                <span className="mt-1 block text-xs leading-none">
+                                    Passions And Interest
+                                </span>
+                            </span>
+
+                            <ArrowRight className="h-5 w-5 shrink-0"/>
+                        </a>
+                    </div>
+                </div>
+
+                
             </section>
         </main>
     )
