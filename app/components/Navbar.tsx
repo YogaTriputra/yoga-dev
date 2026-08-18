@@ -11,8 +11,13 @@ const menu = [
 
 export default function Navbar() {
   const pathname = usePathname();
+
+  if (pathname == "/about/introduction" ) {
+    return null
+  }
+
   return (
-      <nav className="fixed left-1/2 top-6 z-50 flex -translate-x-1/2 rounded-full bg-[#dce2ed] p-2">
+      <nav className="fixed left-1/2 top-4 sm:top-6 z-50 flex -translate-x-1/2 rounded-full bg-[#dce2ed]/90 backdrop-blur-md p-1.5 sm:p-2 shadow-lg border border-white/40 max-w-[92vw]">
       {menu.map((item) => {
         const isActive = pathname === item.href;
 
@@ -20,10 +25,10 @@ export default function Navbar() {
           <Link
             key={item.name}
             href={item.href}
-            className={`rounded-full px-5 py-2 font-bold transition-colors ${
+            className={`rounded-full px-3 sm:px-5 py-1.5 sm:py-2 text-xs sm:text-sm font-bold transition-all ${
               isActive
-                ? "bg-[#3565a0] text-white"
-                : "text-[#587fba] hover:bg-white/50"
+                ? "bg-[#3565a0] text-white shadow-sm"
+                : "text-[#3565a0] hover:bg-white/60"
             }`}
           >
             {item.name}
