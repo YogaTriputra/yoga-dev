@@ -16,14 +16,14 @@ import Link from "next/link";
 
 export default function IntroductionPage() {
   return (
-    <main className="relative min-h-screen bg-gradient-to-br from-[#f0f4f9] via-[#e5ecf5] to-[#d9e4f2] px-4 py-24 sm:px-8 lg:py-28 text-slate-800 flex flex-col items-center justify-center overflow-hidden">
+    <main className="relative h-screen bg-gradient-to-br from-[#f0f4f9] via-[#e5ecf5] to-[#d9e4f2] px-4 py-8 sm:px-8 lg:py-10 text-slate-800 flex flex-col items-center justify-center overflow-hidden">
       {/* Background Glows */}
       <div className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-[#3565a0]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-[#587fba]/20 blur-3xl" />
       <div className="pointer-events-none absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/40 blur-3xl" />
 
       {/* Back button to About overview */}
-      <div className="w-full max-w-7xl mb-6 z-20 px-2">
+      <div className="mb-4 w-full max-w-[1400px] z-20 px-2">
         <Link
           href="/about"
           className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-xs font-bold text-[#3565a0] shadow-sm backdrop-blur-md transition-all hover:bg-white hover:shadow-md"
@@ -34,7 +34,7 @@ export default function IntroductionPage() {
       </div>
 
       {/* Main Grid Container with generous gap */}
-      <div className="relative z-10 grid w-full max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12 xl:gap-16 items-center">
+      <div className="relative z-10 grid w-full max-w-[1400px] grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-10 xl:gap-12">
         
         {/* SVG Connecting Lines (Desktop visible) */}
         <svg
@@ -80,20 +80,20 @@ export default function IntroductionPage() {
         </svg>
 
         {/* LEFT COLUMN: 2 Floating Cards */}
-        <div className="flex flex-col gap-8 lg:col-span-3.5 xl:col-span-3 lg:gap-12">
+        <div className="flex flex-col gap-8 lg:col-span-3.5 lg:gap-10 xl:col-span-3">
           {/* CARD 1: Education (Top Left) */}
-          <div className="animate-float-tl group relative rounded-3xl border border-white/90 bg-white/85 p-6 sm:p-7 shadow-[0_15px_35px_-5px_rgba(53,101,160,0.15)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_45px_-5px_rgba(53,101,160,0.25)]">
+          <div className="animate-float-tl group relative rounded-3xl border border-white/90 bg-white/85 p-5 sm:p-6 shadow-[0_15px_35px_-5px_rgba(53,101,160,0.15)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_45px_-5px_rgba(53,101,160,0.25)]">
             {/* Corner Node Dot */}
             <span className="hidden lg:block absolute -right-2.5 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full border-2 border-white bg-[#3565a0] shadow-sm" />
 
             <div className="flex items-center justify-between">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3565a0] to-[#244975] text-white shadow-md shadow-blue-900/20">
-                <BookOpen className="h-6 w-6" />
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3565a0] to-[#244975] text-white shadow-md shadow-blue-900/20">
+                <BookOpen className="h-7 w-7" />
               </div>
               <MoreHorizontal className="h-5 w-5 text-slate-400 group-hover:text-slate-600" />
             </div>
 
-            <h2 className="mt-4 text-lg font-bold text-[#3565a0]">
+            <h2 className="mt-5 text-xl font-bold text-[#3565a0]">
               Education
             </h2>
             <div className="my-2.5 h-0.5 w-7 rounded-full bg-[#3565a0]" />
@@ -114,18 +114,18 @@ export default function IntroductionPage() {
           </div>
 
           {/* CARD 3: Projects (Bottom Left) */}
-          <div className="animate-float-bl group relative rounded-3xl border border-white/90 bg-white/85 p-6 sm:p-7 shadow-[0_15px_35px_-5px_rgba(53,101,160,0.15)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_45px_-5px_rgba(53,101,160,0.25)]">
+          <div className="animate-float-bl group relative rounded-3xl border border-white/90 bg-white/85 p-5 sm:p-6 shadow-[0_15px_35px_-5px_rgba(53,101,160,0.15)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_45px_-5px_rgba(53,101,160,0.25)]">
             {/* Corner Node Dot */}
             <span className="hidden lg:block absolute -right-2.5 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full border-2 border-white bg-[#3565a0] shadow-sm" />
 
             <div className="flex items-center justify-between">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3565a0] to-[#244975] text-white shadow-md shadow-blue-900/20">
-                <Star className="h-6 w-6" />
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3565a0] to-[#244975] text-white shadow-md shadow-blue-900/20">
+                <Star className="h-7 w-7" />
               </div>
               <MoreHorizontal className="h-5 w-5 text-slate-400 group-hover:text-slate-600" />
             </div>
 
-            <h2 className="mt-4 text-lg font-bold text-[#3565a0]">
+            <h2 className="mt-5 text-xl font-bold text-[#3565a0]">
               Projects
             </h2>
             <div className="my-2.5 h-0.5 w-7 rounded-full bg-[#3565a0]" />
@@ -197,20 +197,20 @@ export default function IntroductionPage() {
         </div>
 
         {/* RIGHT COLUMN: 2 Floating Cards */}
-        <div className="flex flex-col gap-8 lg:col-span-3.5 xl:col-span-3 lg:gap-12">
+        <div className="flex flex-col gap-8 lg:col-span-3.5 lg:gap-10 xl:col-span-3">
           {/* CARD 2: Skills & Focus (Top Right) */}
-          <div className="animate-float-tr group relative rounded-3xl border border-white/90 bg-white/85 p-6 sm:p-7 shadow-[0_15px_35px_-5px_rgba(53,101,160,0.15)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_45px_-5px_rgba(53,101,160,0.25)]">
+          <div className="animate-float-tr group relative rounded-3xl border border-white/90 bg-white/85 p-5 sm:p-6 shadow-[0_15px_35px_-5px_rgba(53,101,160,0.15)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_45px_-5px_rgba(53,101,160,0.25)]">
             {/* Corner Node Dot */}
             <span className="hidden lg:block absolute -left-2.5 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full border-2 border-white bg-[#3565a0] shadow-sm" />
 
             <div className="flex items-center justify-between">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3565a0] to-[#244975] text-white shadow-md shadow-blue-900/20">
-                <Code2 className="h-6 w-6" />
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3565a0] to-[#244975] text-white shadow-md shadow-blue-900/20">
+                <Code2 className="h-7 w-7" />
               </div>
               <MoreHorizontal className="h-5 w-5 text-slate-400 group-hover:text-slate-600" />
             </div>
 
-            <h2 className="mt-4 text-lg font-bold text-[#3565a0]">
+            <h2 className="mt-5 text-xl font-bold text-[#3565a0]">
               Skills &amp; Focus
             </h2>
             <div className="my-2.5 h-0.5 w-7 rounded-full bg-[#3565a0]" />
@@ -236,18 +236,18 @@ export default function IntroductionPage() {
           </div>
 
           {/* CARD 4: Interests (Bottom Right) */}
-          <div className="animate-float-br group relative rounded-3xl border border-white/90 bg-white/85 p-6 sm:p-7 shadow-[0_15px_35px_-5px_rgba(53,101,160,0.15)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_45px_-5px_rgba(53,101,160,0.25)]">
+          <div className="animate-float-br group relative rounded-3xl border border-white/90 bg-white/85 p-5 sm:p-6 shadow-[0_15px_35px_-5px_rgba(53,101,160,0.15)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_45px_-5px_rgba(53,101,160,0.25)]">
             {/* Corner Node Dot */}
             <span className="hidden lg:block absolute -left-2.5 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full border-2 border-white bg-[#3565a0] shadow-sm" />
 
             <div className="flex items-center justify-between">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3565a0] to-[#244975] text-white shadow-md shadow-blue-900/20">
-                <Coffee className="h-6 w-6" />
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3565a0] to-[#244975] text-white shadow-md shadow-blue-900/20">
+                <Coffee className="h-7 w-7" />
               </div>
               <MoreHorizontal className="h-5 w-5 text-slate-400 group-hover:text-slate-600" />
             </div>
 
-            <h2 className="mt-4 text-lg font-bold text-[#3565a0]">
+            <h2 className="mt-5 text-xl font-bold text-[#3565a0]">
               Interests
             </h2>
             <div className="my-2.5 h-0.5 w-7 rounded-full bg-[#3565a0]" />
