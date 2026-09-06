@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function About() {
     return (
         <main className="min-h-screen bg-blue-50">
-            <section id="about" className="relative isolate mx-auto grid min-h-screen max-w-7xl grid-cols-1 items-center gap-100 overflow-hidden px-8 pb-10 pt-24 lg:grid-cols-2">
+            <section id="about" className="relative isolate mx-auto grid min-h-screen max-w-7xl grid-cols-1 items-center gap-12 overflow-hidden px-8 pb-8 pt-24 lg:grid-cols-2 lg:gap-20">
                 <div className="pointer-events-none absolute left-[46%] top-[44%] -z-10 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#3565a0]/10" />
                 <div className="pointer-events-none absolute left-[46%] top-[44%] -z-10 h-[390px] w-[390px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#3565a0]/15" />
                 <div className="pointer-events-none absolute left-[43%] top-[23%] -z-10 h-3 w-3 rounded-full bg-[#3565a0]/30 shadow-[0_0_24px_rgba(53,101,160,0.55)]" />
@@ -21,7 +21,7 @@ export default function About() {
                     About Me
                 </h1>
 
-                <h1 className="mt-4 text-5xl font-extrabold tracking-tight lg:text-6xl">
+                <h1 className="mt-4 text-4xl font-extrabold tracking-tight lg:text-5xl">
                     Get to Know <br/> More <span className="text-[#3565a0]">About me</span>
                 </h1>
 
@@ -31,56 +31,56 @@ export default function About() {
                     <span className="rounded-full bg-[#3565a0] h-2 w-2.5"/>
                 </div>
 
-                <div className="mt-6 max-w-[480px] space-y-4 text-lg leading-relaxed lg:text-xl">
+                <div className="mt-5 max-w-[480px] space-y-3 text-base leading-relaxed lg:text-lg">
                     <p className="text-slate-700"> I&apos;m an informatics student who loves turning ideas into real, interactive, and user-friendly web experiences.</p>
 
                     <p className="text-slate-700"> I enjoy building clean and responsive interfaces, exploring new technologies, and solving problems through code.</p>
                 </div>
 
-                <div className="mt-5 space-y-3">
+                <div className="mt-5 space-y-2.5">
                     <div className="flex items-center gap-4">
-                        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-[#dce4f3] text-[#3565a0] border border-blue-200/60 shadow-sm">
-                            <Coffee className="h-8 w-8"/>
+                        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#dce4f3] text-[#3565a0] border border-blue-200/60 shadow-sm">
+                            <Coffee className="h-7 w-7"/>
                         </div>
 
                         <div className="max-w-[400px]">
-                            <h2 className="text-lg font-bold lg:text-xl text-slate-700">
+                            <h2 className="text-base font-bold lg:text-lg text-slate-700">
                                 Coffee &amp; Code
                             </h2>
 
-                            <p className="mt-1 text-sm lg:text-base text-slate-600 leading-snug">
+                            <p className="mt-0.5 text-xs lg:text-sm text-slate-600 leading-snug">
                                 Most of my ideas start with curiosity, a cup of coffee, and the excitement of building something new.
                             </p>
                         </div>
                     </div>
 
                     <div className="flex items-center gap-4">
-                        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-[#dce4f3] text-[#3565a0] border border-blue-200/60 shadow-sm">
-                            <Sprout className="h-8 w-8"/>
+                        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#dce4f3] text-[#3565a0] border border-blue-200/60 shadow-sm">
+                            <Sprout className="h-7 w-7"/>
                         </div>
 
                         <div className="max-w-[400px]">
-                            <h2 className="text-lg font-bold lg:text-xl text-slate-700">
+                            <h2 className="text-base font-bold lg:text-lg text-slate-700">
                                 Keep Growing
                             </h2>
 
-                            <p className="mt-1 text-sm lg:text-base text-slate-600 leading-snug">
+                            <p className="mt-0.5 text-xs lg:text-sm text-slate-600 leading-snug">
                                 Every project is an opportunity to learn, improve, and become a better developer than yesterday.
                             </p>
                         </div>
                     </div>
 
                     <div className="flex items-center gap-4">
-                        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-[#dce4f3] text-[#3565a0] border border-blue-200/60 shadow-sm">
-                            <Handshake className="h-8 w-8"/>
+                        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#dce4f3] text-[#3565a0] border border-blue-200/60 shadow-sm">
+                            <Handshake className="h-7 w-7"/>
                         </div>
 
                         <div className="max-w-[400px]">
-                            <h2 className="text-lg font-bold lg:text-xl text-slate-700">
+                            <h2 className="text-base font-bold lg:text-lg text-slate-700">
                                 Open to Collaboration
                             </h2>
 
-                            <p className="mt-1 text-sm lg:text-base text-slate-600 leading-snug">
+                            <p className="mt-0.5 text-xs lg:text-sm text-slate-600 leading-snug">
                                 I enjoy working with others, exchanging ideas, and creating meaningful digital experiences together.
                             </p>
                         </div>
@@ -97,7 +97,7 @@ export default function About() {
                     <span className="h-2 w-2 rounded-full bg-[#3565a0]/20" />
                 </div>
 
-                <div className="relative h-[480px] w-[380px] overflow-hidden rounded-3xl border-4 border-white shadow-[0_20px_45px_-10px_rgba(53,101,160,0.22)] ring-1 ring-blue-900/10 transition-all duration-300 group hover:shadow-2xl sm:h-[540px] sm:w-[430px] lg:h-[580px] lg:w-[460px]">
+                <div className="relative h-[440px] w-[350px] overflow-hidden rounded-3xl border-4 border-white shadow-[0_20px_45px_-10px_rgba(53,101,160,0.22)] ring-1 ring-blue-900/10 transition-all duration-300 group hover:shadow-2xl sm:h-[480px] sm:w-[380px] lg:h-[520px] lg:w-[410px]">
                     <Image
                     src="/reje.jpg"
                     alt="Foto Yoga about"
@@ -134,9 +134,9 @@ export default function About() {
 
                     <h1 className="mt-5 text-6xl font-extrabold text-white">
                         Discover More <br/> <span className="inline-block rounded-2xl px-3 py-2 bg-white text-[#3565a0] mt-3">About Me</span>
-                    </h1>
+                    </h1>                    <p className="mt-6 max-w-[460px] text-lg leading-relaxed text-white">
 
-                    <p className="mt-6 max-w-[460px] text-lg leading-relaxed text-white">
+
                         Each section opens a new story about my journey, skills, and passions.
                     </p>
                 </div>
@@ -172,7 +172,7 @@ export default function About() {
                             2
                         </span>
 
-                        <a href="#experience" className="flex flex-1 items-center border-l-8 border-slate-900 bg-white px-4 py-4 text-slate-900 shadow-[0_5px_0_#111827] transition hover:translate-x-1 hover:bg-blue-900 hover:text-white">
+                        <Link href="/about/journey" className="flex flex-1 items-center border-l-8 border-slate-900 bg-white px-4 py-4 text-slate-900 shadow-[0_5px_0_#111827] transition hover:translate-x-1 hover:bg-blue-900 hover:text-white">
                             <span className="mr-3 flex h-9 w-9 shrink-0 items-center justify-center bg-[#3565a0] text-white">
                                 <Star className="h-5 w-5"/>
                             </span>
@@ -188,7 +188,7 @@ export default function About() {
                             </span>
 
                             <ArrowRight className="h-6 w-6 shrink-0"/>
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="flex items-center gap-5">
