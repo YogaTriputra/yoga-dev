@@ -23,15 +23,13 @@ export default function IntroductionPage() {
       <div className="pointer-events-none absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/40 blur-3xl" />
 
       {/* Back button to About overview */}
-      <div className="mb-4 w-full max-w-[1400px] z-20 px-2">
-        <Link
-          href="/about"
-          className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-xs font-bold text-[#3565a0] shadow-sm backdrop-blur-md transition-all hover:bg-white hover:shadow-md"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          Back to About Overview
-        </Link>
-      </div>
+      <Link
+        href="/about"
+        className="absolute top-6 left-6 sm:left-10 z-30 inline-flex items-center gap-1.5 rounded-full bg-white/80 px-3.5 py-1.5 text-xs font-semibold text-[#3565a0] shadow-sm backdrop-blur-md transition-all hover:bg-white hover:shadow-md hover:scale-105"
+      >
+        <ArrowLeft className="h-4 w-4" />
+        <span>Back to Overview</span>
+      </Link>
 
       {/* Main Grid Container with generous gap */}
       <div className="relative z-10 grid w-full max-w-[1400px] grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-10 xl:gap-12">
