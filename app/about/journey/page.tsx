@@ -5,6 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import CareerTimeline from "./CareerTimeline";
 import EducationTimeline from "./EducationTimeline";
 
 export default function JourneyPage() {
@@ -100,11 +101,7 @@ return (
             {activeTab === "education" ? (
                 <EducationTimeline />
             ) : (
-                <div className="mt-8">
-                    <h3 className="text-3xl font-bold">
-                        CAREER
-                    </h3>
-                </div>
+                <CareerTimeline />
             )}
     </div>
 
