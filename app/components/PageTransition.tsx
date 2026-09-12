@@ -12,15 +12,17 @@ export default function PageTransition({
         <motion.div
         initial={{
             opacity: 0,
-            scale: 0.98,
+            x: 48,
+            scale: 0.985,
         }}
         animate={{
             opacity: 1,
+            x: 0,
             scale: 1,
         }}
         transition={{
-            duration: 0.45,
-            delay: 0.2,
+            duration: 0.55,
+            delay: 0.12,
             ease: [0.22, 1, 0.36, 1],
         }}
         >

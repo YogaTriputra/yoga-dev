@@ -1,11 +1,14 @@
 "use client";
 
-import { ArrowLeft, GraduationCap } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import EducationTimeline from "./EducationTimeline";
 
 export default function JourneyPage() {
+const router = useRouter();
 const [activeTab, setActiveTab] = useState<"education" | "career">("education");
 
 return (
@@ -95,24 +98,40 @@ return (
 
         {/* Konten berdasarkan Tab */}
             {activeTab === "education" ? (
-                <div className="mt-8 space-y-10">
-                    <div className="flex items-center gap-4">
-                        <h3 className="text-3xl font-bold">
-                        EDUCATION
-                    </h3>
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#3565a0]">
-                        Places that shaped me
-                    </span>
-                    <div className="h-0.5 flex-1 bg-slate-300/60" />
-                    </div>
-                </div>
+                <EducationTimeline />
             ) : (
-                <div>
+                <div className="mt-8">
                     <h3 className="text-3xl font-bold">
                         CAREER
                     </h3>
                 </div>
             )}
+    </div>
+
+    <div className="fixed bottom-5 left-1/2 z-40 flex -translate-x-1/2 items-center gap-4 rounded-full border border-white/70 bg-white/75 px-4 py-2 shadow-[0_8px_24px_rgba(53,101,160,0.16)] backdrop-blur-md">
+        <button
+            type="button"
+            onClick={() => router.push("/about/introduction")}
+            className="flex h-7 w-7 items-center justify-center rounded-full bg-[#3565a0] text-white transition duration-200 hover:scale-105 hover:bg-[#28558f]"
+        >
+            <ArrowLeft className="h-4 w-4" />
+        </button>
+
+        <div className="flex items-center gap-2">
+            <button type="button" onClick={() => router.push("/about/introduction")} className="h-2 w-2 rounded-full bg-[#3565a0]/25 transition-all duration-300 hover:bg-[#3565a0]/60" aria-label="Slide 1 (Introduction)" />
+            <button type="button" className="h-2 w-6 rounded-full bg-[#3565a0] transition-all duration-300" aria-label="Slide 2 (Journey)" />
+            <button type="button" className="h-2 w-2 rounded-full bg-[#3565a0]/25 transition-all duration-300 hover:bg-[#3565a0]/60" aria-label="Slide 3" />
+            <button type="button" className="h-2 w-2 rounded-full bg-[#3565a0]/25 transition-all duration-300 hover:bg-[#3565a0]/60" aria-label="Slide 4" />
+            <button type="button" className="h-2 w-2 rounded-full bg-[#3565a0]/25 transition-all duration-300 hover:bg-[#3565a0]/60" aria-label="Slide 5" />
+        </div>
+
+        <button
+            type="button"
+            disabled
+            className="flex h-7 w-7 cursor-not-allowed items-center justify-center rounded-full text-[#3565a0] opacity-25"
+        >
+            <ArrowRight className="h-4 w-4" />
+        </button>
     </div>
     </main>
 );

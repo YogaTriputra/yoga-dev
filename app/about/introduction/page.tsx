@@ -1,3 +1,5 @@
+"use client";
+
 import {
   BookOpen,
   Code2,
@@ -9,12 +11,17 @@ import {
   Laptop,
   PenTool,
   MoreHorizontal,
-  ArrowLeft
+  ArrowLeft,
+  ArrowRight
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { motion } from "motion/react";
 
 export default function IntroductionPage() {
+  const router = useRouter();
+
   return (
     <main className="relative h-screen bg-gradient-to-br from-[#f0f4f9] via-[#e5ecf5] to-[#d9e4f2] px-4 py-8 sm:px-8 lg:py-10 text-slate-800 flex flex-col items-center justify-center overflow-hidden">
       {/* Background Glows */}
@@ -23,13 +30,20 @@ export default function IntroductionPage() {
       <div className="pointer-events-none absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/40 blur-3xl" />
 
       {/* Back button to About overview */}
+      <motion.div
+        initial={{ opacity: 0, x: -24 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.45, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+        className="absolute left-6 top-6 z-30 sm:left-10"
+      >
       <Link
         href="/about"
-        className="absolute top-6 left-6 sm:left-10 z-30 inline-flex items-center gap-1.5 rounded-full bg-white/80 px-3.5 py-1.5 text-xs font-semibold text-[#3565a0] shadow-sm backdrop-blur-md transition-all hover:bg-white hover:shadow-md hover:scale-105"
+        className="inline-flex items-center gap-1.5 rounded-full bg-white/80 px-3.5 py-1.5 text-xs font-semibold text-[#3565a0] shadow-sm backdrop-blur-md transition-all hover:scale-105 hover:bg-white hover:shadow-md"
       >
         <ArrowLeft className="h-4 w-4" />
         <span>Back to Overview</span>
       </Link>
+      </motion.div>
 
       {/* Main Grid Container with generous gap */}
       <div className="relative z-10 grid w-full max-w-[1400px] grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-10 xl:gap-12">
@@ -78,20 +92,25 @@ export default function IntroductionPage() {
         </svg>
 
         {/* LEFT COLUMN: 2 Floating Cards */}
-        <div className="flex flex-col gap-8 lg:col-span-3.5 lg:gap-10 xl:col-span-3">
+        <motion.div
+          initial={{ opacity: 0, x: -45 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          className="flex flex-col gap-8 lg:col-span-3.5 lg:gap-10 xl:col-span-3"
+        >
           {/* CARD 1: Education (Top Left) */}
           <div className="animate-float-tl group relative rounded-3xl border border-white/90 bg-white/85 p-5 sm:p-6 shadow-[0_15px_35px_-5px_rgba(53,101,160,0.15)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_45px_-5px_rgba(53,101,160,0.25)]">
             {/* Corner Node Dot */}
             <span className="hidden lg:block absolute -right-2.5 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full border-2 border-white bg-[#3565a0] shadow-sm" />
 
             <div className="flex items-center justify-between">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3565a0] to-[#244975] text-white shadow-md shadow-blue-900/20">
-                <BookOpen className="h-7 w-7" />
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3565a0] to-[#244975] text-white shadow-md shadow-blue-900/20">
+                <BookOpen className="h-6 w-6" />
               </div>
               <MoreHorizontal className="h-5 w-5 text-slate-400 group-hover:text-slate-600" />
             </div>
 
-            <h2 className="mt-5 text-xl font-bold text-[#3565a0]">
+            <h2 className="mt-4 text-lg font-bold text-[#3565a0]">
               Education
             </h2>
             <div className="my-2.5 h-0.5 w-7 rounded-full bg-[#3565a0]" />
@@ -117,13 +136,13 @@ export default function IntroductionPage() {
             <span className="hidden lg:block absolute -right-2.5 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full border-2 border-white bg-[#3565a0] shadow-sm" />
 
             <div className="flex items-center justify-between">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3565a0] to-[#244975] text-white shadow-md shadow-blue-900/20">
-                <Star className="h-7 w-7" />
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3565a0] to-[#244975] text-white shadow-md shadow-blue-900/20">
+                <Star className="h-6 w-6" />
               </div>
               <MoreHorizontal className="h-5 w-5 text-slate-400 group-hover:text-slate-600" />
             </div>
 
-            <h2 className="mt-5 text-xl font-bold text-[#3565a0]">
+            <h2 className="mt-4 text-lg font-bold text-[#3565a0]">
               Projects
             </h2>
             <div className="my-2.5 h-0.5 w-7 rounded-full bg-[#3565a0]" />
@@ -142,10 +161,15 @@ export default function IntroductionPage() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* CENTER COLUMN: Central Profile Hub */}
-        <div className="my-6 flex flex-col items-center text-center lg:col-span-5 xl:col-span-6 lg:my-0 lg:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 35, scale: 0.94 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.65, delay: 0.38, ease: [0.22, 1, 0.36, 1] }}
+          className="my-6 flex flex-col items-center text-center lg:col-span-5 lg:my-0 lg:px-6 xl:col-span-6"
+        >
           <div className="relative mb-4 flex items-center justify-center">
             {/* Outer dotted node ring */}
             <div className="animate-pulse-ring relative flex h-48 w-48 sm:h-56 sm:w-56 items-center justify-center rounded-full border-2 border-dashed border-[#587fba]/40 bg-white/30 backdrop-blur-sm p-4">
@@ -192,23 +216,28 @@ export default function IntroductionPage() {
               I&apos;m constantly learning new technologies, exploring new ideas, and improving my skills through academic and personal projects.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* RIGHT COLUMN: 2 Floating Cards */}
-        <div className="flex flex-col gap-8 lg:col-span-3.5 lg:gap-10 xl:col-span-3">
+        <motion.div
+          initial={{ opacity: 0, x: 45 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.46, ease: [0.22, 1, 0.36, 1] }}
+          className="flex flex-col gap-8 lg:col-span-3.5 lg:gap-10 xl:col-span-3"
+        >
           {/* CARD 2: Skills & Focus (Top Right) */}
           <div className="animate-float-tr group relative rounded-3xl border border-white/90 bg-white/85 p-5 sm:p-6 shadow-[0_15px_35px_-5px_rgba(53,101,160,0.15)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_45px_-5px_rgba(53,101,160,0.25)]">
             {/* Corner Node Dot */}
             <span className="hidden lg:block absolute -left-2.5 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full border-2 border-white bg-[#3565a0] shadow-sm" />
 
             <div className="flex items-center justify-between">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3565a0] to-[#244975] text-white shadow-md shadow-blue-900/20">
-                <Code2 className="h-7 w-7" />
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3565a0] to-[#244975] text-white shadow-md shadow-blue-900/20">
+                <Code2 className="h-6 w-6" />
               </div>
               <MoreHorizontal className="h-5 w-5 text-slate-400 group-hover:text-slate-600" />
             </div>
 
-            <h2 className="mt-5 text-xl font-bold text-[#3565a0]">
+            <h2 className="mt-4 text-lg font-bold text-[#3565a0]">
               Skills &amp; Focus
             </h2>
             <div className="my-2.5 h-0.5 w-7 rounded-full bg-[#3565a0]" />
@@ -239,13 +268,13 @@ export default function IntroductionPage() {
             <span className="hidden lg:block absolute -left-2.5 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full border-2 border-white bg-[#3565a0] shadow-sm" />
 
             <div className="flex items-center justify-between">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3565a0] to-[#244975] text-white shadow-md shadow-blue-900/20">
-                <Coffee className="h-7 w-7" />
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3565a0] to-[#244975] text-white shadow-md shadow-blue-900/20">
+                <Coffee className="h-6 w-6" />
               </div>
               <MoreHorizontal className="h-5 w-5 text-slate-400 group-hover:text-slate-600" />
             </div>
 
-            <h2 className="mt-5 text-xl font-bold text-[#3565a0]">
+            <h2 className="mt-4 text-lg font-bold text-[#3565a0]">
               Interests
             </h2>
             <div className="my-2.5 h-0.5 w-7 rounded-full bg-[#3565a0]" />
@@ -269,9 +298,42 @@ export default function IntroductionPage() {
               </li>
             </ul>
           </div>
-        </div>
+        </motion.div>
 
       </div>
+
+      {/* Slider Controls (Bottom Floating Dots) */}
+      <motion.div
+        initial={{ opacity: 0, y: 20, x: "-50%" }}
+        animate={{ opacity: 1, y: 0, x: "-50%" }}
+        transition={{ duration: 0.45, delay: 0.65, ease: [0.22, 1, 0.36, 1] }}
+        className="fixed bottom-5 left-1/2 z-40 flex items-center gap-4 rounded-full border border-white/70 bg-white/75 px-4 py-2 shadow-[0_8px_24px_rgba(53,101,160,0.16)] backdrop-blur-md"
+      >
+        <button
+          type="button"
+          disabled
+          className="flex h-7 w-7 cursor-not-allowed items-center justify-center rounded-full text-[#3565a0] opacity-25"
+        >
+          <ArrowLeft className="h-4 w-4" />
+        </button>
+
+        <div className="flex items-center gap-2">
+          <button type="button" className="h-2 w-6 rounded-full bg-[#3565a0] transition-all duration-300" aria-label="Slide 1 (Introduction)" />
+          <button type="button" onClick={() => router.push("/about/journey")} className="h-2 w-2 rounded-full bg-[#3565a0]/25 hover:bg-[#3565a0]/60 transition-all duration-300" aria-label="Slide 2 (Journey)" />
+          <button type="button" className="h-2 w-2 rounded-full bg-[#3565a0]/25 hover:bg-[#3565a0]/60 transition-all duration-300" aria-label="Slide 3" />
+          <button type="button" className="h-2 w-2 rounded-full bg-[#3565a0]/25 hover:bg-[#3565a0]/60 transition-all duration-300" aria-label="Slide 4" />
+          <button type="button" className="h-2 w-2 rounded-full bg-[#3565a0]/25 hover:bg-[#3565a0]/60 transition-all duration-300" aria-label="Slide 5" />
+        </div>
+
+        <button
+          type="button"
+          onClick={() => router.push("/about/journey")}
+          className="flex h-7 w-7 items-center justify-center rounded-full bg-[#3565a0] text-white transition duration-200 hover:scale-105 hover:bg-[#28558f]"
+        >
+          <ArrowRight className="h-4 w-4" />
+        </button>
+      </motion.div>
     </main>
   );
 }
+
