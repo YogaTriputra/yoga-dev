@@ -11,7 +11,7 @@ const careerItems = [
     subtitle: "Starting University & Exploring",
     description:
       "Started my Informatics journey at Universitas Amikom Yogyakarta while exploring programming, frontend development, and UI/UX.",
-    tags: ["Informatics Student", "Frontend", "Learning"],
+    tags: ["Informatics Student", "Programming", "Learning"],
     icon: BriefcaseBusiness,
   },
   {

@@ -16,18 +16,18 @@ const educationItems = [
     period: "2019 – 2022",
     number: "01",
     title: "Junior High School",
-    institution: "SMP",
+    institution: "SMP Negeri 3 Biak Kota",
     description:
-      "Started to get familiar with computers and technology. This was the beginning of my curiosity about how software and digital products work.",
+      "A general foundation and the beginning of my journey through education.",
     icon: School,
   },
   {
     period: "2022 – 2025",
     number: "02",
-    title: "Vocational High School",
-    institution: "Software Development (RPL)",
+    title: "Senior High School",
+    institution: "SMA Negeri 1 Biak Kota",
     description:
-      "Studied informatics, learned programming fundamentals, web development, databases, and software development. This is where I started building real projects.",
+      "Continued exploring different interests while preparing for the next step after high school.",
     icon: GraduationCap,
   },
   {

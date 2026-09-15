@@ -73,6 +73,20 @@ html {
   animation: pulse-ring 4s ease-in-out infinite;
 }
 
+@keyframes orbit-line {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: -120;
+  }
+}
+
+.animate-orbit-line {
+  animation: orbit-line 5s linear infinite;
+}
+
 html,
 body {
   overflow-x: hidden;
