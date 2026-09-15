@@ -57,12 +57,12 @@ export default function Home() {
 
             {/* Action Buttons */}
             <div className="mt-6 sm:mt-8 gap-3 sm:gap-4 flex flex-col sm:flex-row flex-wrap justify-center sm:justify-start">
-              <a
-                href="#project"
+              <Link
+                href="/project"
                 className="border-2 border-white bg-[#f0eee9] px-4 py-2.5 sm:py-3 text-center font-bold text-slate-900 shadow-[4px_5px_0_#111827] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none hover:bg-blue-400 hover:text-white text-sm sm:text-base"
               >
                 View my Works ↗
-              </a>
+              </Link>
               <a
                 href="#myCV"
                 className="border-2 border-white bg-transparent px-4 py-2.5 sm:py-3 text-center font-bold text-white shadow-[4px_5px_0_#ffffff] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none hover:bg-white hover:text-slate-900 text-sm sm:text-base"

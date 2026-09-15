@@ -2,6 +2,7 @@
 
 import { Sparkles } from "lucide-react";
 import { useState } from "react";
+import { motion } from "motion/react";
 
 const projects = [
     { number: "01", title: "Project 01" },
@@ -86,7 +87,8 @@ export default function ProjectPage() {
                             strokeDasharray="7 13"
                             className="animate-orbit-line"
                         />
-                        <circle
+                        <motion.circle
+                        key={activeNumber}
                             cx={radius}
                             cy={radius}
                             r={radius - 2}
@@ -95,9 +97,20 @@ export default function ProjectPage() {
                             strokeWidth="3"
                             strokeLinecap="round"
                             strokeDasharray="80 1545"
-                            className="origin-center transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                            initial={{
+                                strokeDashoffset: 80,
+                                opacity: 0,
+                            }}
+                            animate={{
+                                strokeDashoffset: 0,
+                                opacity: 1,
+                            }}
+                            transition={{
+                                duration: 0.65,
+                                ease: [0.22, 1, 0.36, 1],
+                            }}
                             style={{
-                                transform: `rotate(${activeIndex * 90 - 14}deg)`,
+                                transform: "rotate(-14deg)",
                                 transformOrigin: "center",
                             }}
                         />

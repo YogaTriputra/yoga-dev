@@ -18,6 +18,9 @@ export default function Navbar() {
   else if ( pathname == "/about/journey") {
     return null
   }
+  else if ( pathname == "/about/experience") {
+    return null
+  }
 
   return (
       <nav className="fixed left-1/2 top-4 sm:top-6 z-50 flex -translate-x-1/2 rounded-full bg-[#dce2ed]/90 backdrop-blur-md p-1.5 sm:p-2 shadow-lg border border-white/40 max-w-[92vw]">

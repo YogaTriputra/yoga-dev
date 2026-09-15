@@ -124,8 +124,8 @@ return (
 
         <button
             type="button"
-            disabled
-            className="flex h-7 w-7 cursor-not-allowed items-center justify-center rounded-full text-[#3565a0] opacity-25"
+            onClick={() => router.push("/about/experience")}
+            className="flex h-7 w-7 items-center justify-center rounded-full bg-[#3565a0] text-white transition duration-200 hover:scale-105 hover:bg-[#28558f]"
         >
             <ArrowRight className="h-4 w-4" />
         </button>

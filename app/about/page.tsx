@@ -196,7 +196,7 @@ export default function About() {
                             3
                         </span>
 
-                        <a href="#experience" className="flex flex-1 items-center border-l-8 border-slate-900 bg-white px-4 py-4 text-slate-900 shadow-[0_5px_0_#111827] transition hover:translate-x-1 hover:bg-blue-900 hover:text-white">
+                        <Link href="/about/experience" className="flex flex-1 items-center border-l-8 border-slate-900 bg-white px-4 py-4 text-slate-900 shadow-[0_5px_0_#111827] transition hover:translate-x-1 hover:bg-blue-900 hover:text-white">
                             <span className="mr-3 flex h-9 w-9 shrink-0 items-center justify-center bg-[#3565a0] text-white">
                                 <Star className="h-5 w-5"/>
                             </span>
@@ -212,7 +212,7 @@ export default function About() {
                             </span>
 
                             <ArrowRight className="h-6 w-6 shrink-0"/>
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="flex items-center gap-5">
