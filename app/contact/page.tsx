@@ -46,7 +46,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="relative min-h-screen bg-blue-50 overflow-hidden pt-16 pb-[calc(7rem+env(safe-area-inset-bottom))] px-4 sm:px-10 lg:pt-24 lg:pb-16">
+    <main className="relative min-h-screen bg-blue-50 dark:bg-[#0b1424] dark:text-[#f0eee9] overflow-hidden pt-16 pb-[calc(7rem+env(safe-area-inset-bottom))] px-4 sm:px-10 lg:pt-24 lg:pb-16">
       {/* Background Ornaments (Konsisten dengan About page) */}
       <div className="pointer-events-none absolute left-1/2 top-1/3 -z-10 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#3565a0]/10" />
       <div className="pointer-events-none absolute left-1/2 top-1/3 -z-10 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#3565a0]/15" />
@@ -191,7 +191,7 @@ export default function ContactPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="min-w-0 lg:col-span-7"
           >
-            <div className="rounded-3xl border border-white/60 bg-white/80 p-4 sm:p-10 shadow-xl shadow-blue-900/5 backdrop-blur-md">
+            <div className="rounded-3xl border border-white/60 bg-white/80 dark:bg-[#182b45] dark:border-[#38516f] p-4 sm:p-10 shadow-xl shadow-blue-900/5 backdrop-blur-md">
               <h2 className="text-xl font-bold text-slate-800 flex items-center gap-2">
                 <MessageSquare className="w-6 h-6 text-[#3565a0]" />
                 Send a Message

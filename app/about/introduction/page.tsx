@@ -23,11 +23,11 @@ export default function IntroductionPage() {
   const router = useRouter();
 
   return (
-    <main className="relative min-h-screen bg-gradient-to-br from-[#f0f4f9] via-[#e5ecf5] to-[#d9e4f2] px-4 pt-24 pb-[calc(7rem+env(safe-area-inset-bottom))] sm:px-8 lg:h-screen lg:py-10 text-slate-800 flex flex-col items-center justify-start lg:justify-center overflow-x-clip lg:overflow-hidden">
+    <main className="relative min-h-screen bg-gradient-to-br from-[#f0f4f9] via-[#e5ecf5] to-[#d9e4f2] dark:from-[#0b1424] dark:via-[#101e32] dark:to-[#14263e] px-4 pt-24 pb-[calc(7rem+env(safe-area-inset-bottom))] sm:px-8 lg:h-screen lg:py-10 text-slate-800 dark:text-[#f0eee9] flex flex-col items-center justify-start lg:justify-center overflow-x-clip lg:overflow-hidden">
       {/* Background Glows */}
       <div className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-[#3565a0]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-[#587fba]/20 blur-3xl" />
-      <div className="pointer-events-none absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/40 blur-3xl" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/40 dark:bg-[#3565a0]/10 blur-3xl" />
 
       {/* Back button to About overview */}
       <motion.div
@@ -99,7 +99,7 @@ export default function IntroductionPage() {
           className="flex flex-col gap-8 lg:col-span-3.5 lg:gap-10 xl:col-span-3"
         >
           {/* CARD 1: Education (Top Left) */}
-          <div className="animate-float-tl group relative rounded-3xl border border-white/90 bg-white/85 p-5 sm:p-6 shadow-[0_15px_35px_-5px_rgba(53,101,160,0.15)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_45px_-5px_rgba(53,101,160,0.25)]">
+          <div className="animate-float-tl group relative rounded-3xl border border-white/90 bg-white/85 dark:bg-[#182b45] dark:border-[#38516f] p-5 sm:p-6 shadow-[0_15px_35px_-5px_rgba(53,101,160,0.15)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_45px_-5px_rgba(53,101,160,0.25)]">
             {/* Corner Node Dot */}
             <span className="hidden lg:block absolute -right-2.5 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full border-2 border-white bg-[#3565a0] shadow-sm" />
 
@@ -131,7 +131,7 @@ export default function IntroductionPage() {
           </div>
 
           {/* CARD 3: Projects (Bottom Left) */}
-          <div className="animate-float-bl group relative rounded-3xl border border-white/90 bg-white/85 p-5 sm:p-6 shadow-[0_15px_35px_-5px_rgba(53,101,160,0.15)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_45px_-5px_rgba(53,101,160,0.25)]">
+          <div className="animate-float-bl group relative rounded-3xl border border-white/90 bg-white/85 dark:bg-[#182b45] dark:border-[#38516f] p-5 sm:p-6 shadow-[0_15px_35px_-5px_rgba(53,101,160,0.15)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_45px_-5px_rgba(53,101,160,0.25)]">
             {/* Corner Node Dot */}
             <span className="hidden lg:block absolute -right-2.5 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full border-2 border-white bg-[#3565a0] shadow-sm" />
 
@@ -226,7 +226,7 @@ export default function IntroductionPage() {
           className="flex flex-col gap-8 lg:col-span-3.5 lg:gap-10 xl:col-span-3"
         >
           {/* CARD 2: Skills & Focus (Top Right) */}
-          <div className="animate-float-tr group relative rounded-3xl border border-white/90 bg-white/85 p-5 sm:p-6 shadow-[0_15px_35px_-5px_rgba(53,101,160,0.15)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_45px_-5px_rgba(53,101,160,0.25)]">
+          <div className="animate-float-tr group relative rounded-3xl border border-white/90 bg-white/85 dark:bg-[#182b45] dark:border-[#38516f] p-5 sm:p-6 shadow-[0_15px_35px_-5px_rgba(53,101,160,0.15)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_45px_-5px_rgba(53,101,160,0.25)]">
             {/* Corner Node Dot */}
             <span className="hidden lg:block absolute -left-2.5 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full border-2 border-white bg-[#3565a0] shadow-sm" />
 
@@ -263,7 +263,7 @@ export default function IntroductionPage() {
           </div>
 
           {/* CARD 4: Interests (Bottom Right) */}
-          <div className="animate-float-br group relative rounded-3xl border border-white/90 bg-white/85 p-5 sm:p-6 shadow-[0_15px_35px_-5px_rgba(53,101,160,0.15)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_45px_-5px_rgba(53,101,160,0.25)]">
+          <div className="animate-float-br group relative rounded-3xl border border-white/90 bg-white/85 dark:bg-[#182b45] dark:border-[#38516f] p-5 sm:p-6 shadow-[0_15px_35px_-5px_rgba(53,101,160,0.15)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_45px_-5px_rgba(53,101,160,0.25)]">
             {/* Corner Node Dot */}
             <span className="hidden lg:block absolute -left-2.5 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full border-2 border-white bg-[#3565a0] shadow-sm" />
 

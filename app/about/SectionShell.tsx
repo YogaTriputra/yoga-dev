@@ -26,7 +26,7 @@ export function RevealCard({ children, className = "", index = 0 }: {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.45, delay: Math.min(index * 0.03, 0.1), ease: [0.22, 1, 0.36, 1] }}
-      className={`min-w-0 rounded-3xl border border-white/90 bg-white/85 p-5 sm:p-8 shadow-[0_15px_35px_-5px_rgba(53,101,160,0.15)] backdrop-blur-xl transition-[translate,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_25px_45px_-5px_rgba(53,101,160,0.25)] motion-reduce:translate-none motion-reduce:transform-none motion-reduce:transition-none lg:p-10 ${className}`}
+      className={`min-w-0 rounded-3xl border border-white/90 bg-white/85 dark:border-[#38516f] dark:bg-[#182b45] p-5 sm:p-8 shadow-[0_15px_35px_-5px_rgba(53,101,160,0.15)] backdrop-blur-xl transition-[translate,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_25px_45px_-5px_rgba(53,101,160,0.25)] motion-reduce:translate-none motion-reduce:transform-none motion-reduce:transition-none lg:p-10 ${className}`}
     >
       {children}
     </motion.div>
@@ -46,11 +46,11 @@ export default function SectionShell({ number, title, subtitle, description, chi
   const next = sections[activeIndex + 1];
 
   return (
-    <main className="relative isolate min-h-screen bg-gradient-to-br from-[#f0f4f9] via-[#e5ecf5] to-[#d9e4f2] px-5 pb-[calc(8rem+env(safe-area-inset-bottom))] pt-32 text-slate-800 sm:px-8 sm:pt-36 lg:px-12 lg:pt-40">
+    <main className="relative isolate min-h-screen bg-gradient-to-br from-[#f0f4f9] via-[#e5ecf5] to-[#d9e4f2] dark:from-[#0b1424] dark:via-[#101e32] dark:to-[#14263e] px-5 pb-[calc(8rem+env(safe-area-inset-bottom))] pt-32 text-slate-800 dark:text-[#f0eee9] sm:px-8 sm:pt-36 lg:px-12 lg:pt-40">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute -left-24 -top-24 h-96 w-96 rounded-full bg-[#3565a0]/15 blur-3xl" />
         <div className="absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-[#587fba]/20 blur-3xl" />
-        <div className="absolute left-1/2 top-1/3 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-white/40 blur-3xl" />
+        <div className="absolute left-1/2 top-1/3 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-white/40 dark:bg-[#3565a0]/10 blur-3xl" />
       </div>
       <Link href="/about" className="absolute left-6 top-6 inline-flex items-center gap-1.5 rounded-full bg-white/80 px-3.5 py-1.5 text-xs font-semibold text-[#3565a0] shadow-sm backdrop-blur-md transition hover:scale-105 hover:bg-white motion-reduce:transform-none motion-reduce:transition-none sm:left-10">
         <ArrowLeft className="h-4 w-4" />

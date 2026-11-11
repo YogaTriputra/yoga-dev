@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function About() {
     return (
-        <main className="min-h-screen bg-blue-50">
+        <main className="min-h-screen bg-blue-50 dark:bg-[#0b1424] dark:text-[#f0eee9]">
             <section id="about" className="relative isolate mx-auto grid min-h-screen max-w-7xl grid-cols-1 items-center gap-10 overflow-hidden px-6 pb-12 pt-16 sm:gap-12 sm:px-8 sm:pt-24 lg:pb-8 lg:grid-cols-2 lg:gap-20">
                 <div className="pointer-events-none absolute left-[46%] top-[44%] -z-10 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#3565a0]/10" />
                 <div className="pointer-events-none absolute left-[46%] top-[44%] -z-10 h-[390px] w-[390px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#3565a0]/15" />
@@ -109,7 +109,7 @@ export default function About() {
             </div>
             </section>
 
-            <section className="relative isolate grid min-h-screen grid-cols-1 items-center gap-12 overflow-hidden bg-[#3565a0] px-4 py-16 sm:px-10 lg:grid-cols-2 lg:gap-0 lg:py-0">
+            <section className="relative isolate grid min-h-screen grid-cols-1 items-center gap-12 overflow-hidden bg-[#3565a0] dark:bg-[#12243b] px-4 py-16 sm:px-10 lg:grid-cols-2 lg:gap-0 lg:py-0">
                 <div className="pointer-events-none absolute -left-44 top-1/2 -z-10 h-[520px] w-[520px] -translate-y-1/2 rounded-full border-[34px] border-white/5" />
                 <div className="pointer-events-none absolute -right-36 -top-32 -z-10 h-[420px] w-[420px] rounded-full border border-white/15" />
                 <div className="pointer-events-none absolute right-[36%] top-0 -z-10 h-full w-32 -skew-x-12 bg-white/[0.035]" />
@@ -144,7 +144,7 @@ export default function About() {
                 {/* bagian kanan */}
                 <div className="mx-auto w-full min-w-0 max-w-xl space-y-8 lg:ml-0 lg:mr-auto lg:space-y-12">
                     <div className="flex items-center gap-2 sm:gap-5">
-                        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full shadow-[-4px_4px_0_#111827] bg-white text-lg font-bold text-black">
+                        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full shadow-[-4px_4px_0_#111827] bg-white text-lg font-bold text-black dark:text-[#f0eee9]">
                             1
                         </span>
 
@@ -168,7 +168,7 @@ export default function About() {
                     </div>
 
                     <div className="flex items-center gap-2 sm:gap-5">
-                        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full shadow-[-4px_4px_0_#111827] bg-white text-lg font-bold text-black">
+                        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full shadow-[-4px_4px_0_#111827] bg-white text-lg font-bold text-black dark:text-[#f0eee9]">
                             2
                         </span>
 
@@ -192,7 +192,7 @@ export default function About() {
                     </div>
 
                     <div className="flex items-center gap-2 sm:gap-5">
-                        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full shadow-[-4px_4px_0_#111827] bg-white text-lg font-bold text-black">
+                        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full shadow-[-4px_4px_0_#111827] bg-white text-lg font-bold text-black dark:text-[#f0eee9]">
                             3
                         </span>
 
@@ -216,7 +216,7 @@ export default function About() {
                     </div>
 
                     <div className="flex items-center gap-2 sm:gap-5">
-                        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full shadow-[-4px_4px_0_#111827] bg-white text-lg font-bold text-black">
+                        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full shadow-[-4px_4px_0_#111827] bg-white text-lg font-bold text-black dark:text-[#f0eee9]">
                             4
                         </span>
 
@@ -240,7 +240,7 @@ export default function About() {
                     </div>
 
                     <div className="flex items-center gap-2 sm:gap-5">
-                        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full shadow-[-4px_4px_0_#111827] bg-white text-lg font-bold text-black">
+                        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full shadow-[-4px_4px_0_#111827] bg-white text-lg font-bold text-black dark:text-[#f0eee9]">
                             5
                         </span>
 

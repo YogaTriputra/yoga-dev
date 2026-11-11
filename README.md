@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Yoga Setia Triputra — Portfolio
 
-## Getting Started
+Website portofolio pribadi Yoga Setia Triputra, mahasiswa Informatika Universitas Amikom Yogyakarta yang berfokus pada frontend development. Dibangun dengan Next.js, React, dan Tailwind CSS dengan identitas visual biru, off-white, dan dark navy.
 
-First, run the development server:
+## Fitur
+
+- Halaman Home dengan profil, teknologi, dan tautan sosial.
+- About dengan lima bagian: Introduction, My Journey, What I Do, Tech Stack, dan Beyond Coding.
+- Showcase proyek dengan navigasi carousel desktop dan tab pada layar kecil.
+- Preview live NeoRain dan tautan ke aplikasi aslinya.
+- CV PDF satu halaman dengan foto yang dapat diunduh.
+- Contact dengan tautan email, tombol salin alamat, dan form untuk menyusun email.
+- Dock navigasi dengan indikator aktif dan animasi spring.
+- Transisi halaman dengan variasi panel serta transisi konsisten untuk About 1–5.
+- Light/dark mode yang mengikuti preferensi sistem secara default dan menyimpan pilihan pengguna di browser.
+- Layout responsif untuk mobile, tablet, dan desktop serta dukungan preferensi reduced motion.
+
+## Tech Stack
+
+| Teknologi | Penggunaan |
+| --- | --- |
+| Next.js 16 / App Router | Routing dan aplikasi web |
+| React 19 | Komponen antarmuka |
+| TypeScript | Pemeriksaan tipe |
+| Tailwind CSS 4 | Styling responsif dan tema |
+| Motion | Animasi dan micro-interactions |
+| Lucide React | Ikon antarmuka |
+| Geist | Font melalui `next/font` |
+
+## Menjalankan Secara Lokal
+
+Gunakan Node.js 20.9 atau lebih baru dan npm.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka `http://localhost:3000` di browser. Perubahan kode akan diperbarui otomatis saat development server berjalan.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Pemeriksaan dan Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npx tsc --noEmit --incremental false
+npm run build
+npm run start
+```
 
-## Learn More
+`npm run start` dijalankan setelah build berhasil. Proyek belum memiliki suite automated test khusus.
 
-To learn more about Next.js, take a look at the following resources:
+## Struktur Proyek
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+app/
+  page.tsx                  Home
+  layout.tsx                Layout global dan inisialisasi tema
+  template.tsx              Pembungkus transisi halaman
+  globals.css               Styling global
+  components/
+    Navbar.tsx              Dock navigasi
+    PageTransition.tsx      Transisi antarhalaman
+    ThemeToggle.tsx         Toggle dan pengelolaan tema
+    DotField.tsx            Dekorasi interaktif
+  about/
+    page.tsx                Overview About
+    SectionShell.tsx        Layout reusable untuk bagian 3–5
+    introduction/           Introduction
+    journey/                Pendidikan dan perjalanan belajar
+    experience/             What I Do
+    tech-stack/             Technologies I Use
+    beyond-coding/          Passions and Interests
+  project/page.tsx          Showcase proyek
+  contact/page.tsx          Kontak dan form email
+public/
+  foto.jpg                  Foto formal CV
+  yoga-setia-triputra-cv.pdf PDF yang digunakan tombol download
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Mengubah Konten
 
-## Deploy on Vercel
+- **Profil dan tautan sosial:** `app/page.tsx`.
+- **Daftar proyek dan URL live:** `app/project/page.tsx`.
+- **Email penerima:** konstanta `email` pada `app/contact/page.tsx`.
+- **Judul tab dan metadata:** `app/layout.tsx`.
+- **CV:** ganti `public/yoga-setia-triputra-cv.pdf` untuk memperbarui file unduhan; PDF tidak dibuat otomatis dari konten website.
+- **Tema:** toggle pada dock, atau tombol floating pada halaman detail About. Pilihan disimpan melalui key `theme` di localStorage.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Cara Kerja Form Kontak
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Form menggunakan `mailto:` untuk membuka aplikasi email pengunjung dengan penerima, subjek, dan pesan yang sudah terisi. Pengunjung tetap harus menekan **Send** di aplikasi email. Form ini tidak mengirim email langsung dari server dan tidak menyimpan pesan.
+
+Pengiriman langsung memerlukan integrasi layanan email atau backend. Implementasi saat ini tidak memerlukan API key maupun environment variable.
+
+### Preview Proyek
+
+Preview NeoRain menggunakan iframe eksternal. Ketersediaan dan interaksinya bergantung pada aplikasi sumber serta kebijakan embedding browser; tautan live tetap disediakan untuk membuka aplikasi secara langsung.
+
+## Deploy ke Vercel
+
+1. Hubungkan akun Vercel dengan GitHub.
+2. Import repository [YogaTriputra/yoga-dev](https://github.com/YogaTriputra/yoga-dev).
+3. Pilih preset **Next.js**, root directory `./`, dan biarkan pengaturan build default.
+4. Klik **Deploy**.
+5. Setelah integrasi Git aktif, push ke branch production `main` memicu deployment baru.
+
+Domain dapat dikelola melalui menu **Domains** di dashboard proyek Vercel. Tidak ada environment variable yang wajib untuk fitur saat ini.
+
+## Kontak
+
+- Email: [yogasetiatriputra@gmail.com](mailto:yogasetiatriputra@gmail.com)
+- GitHub: [YogaTriputra](https://github.com/YogaTriputra)
+- LinkedIn: [Yoga Setia Triputra](https://www.linkedin.com/in/yoga-triputra-2a3345416/)

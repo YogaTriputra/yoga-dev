@@ -17,7 +17,7 @@ export default function BeyondCodingPage() {
             <div className="flex flex-col items-start gap-6 lg:flex-row">
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3565a0] to-[#244975] text-white shadow-md shadow-blue-900/20"><Icon className="h-6 w-6" aria-hidden="true" /></span>
               <div>
-                <h2 className="text-lg font-bold tracking-tight text-[#3565a0] sm:text-xl">{title}</h2>
+                <h2 className="text-lg font-bold tracking-tight text-[#3565a0] dark:text-[#a8c4e8] sm:text-xl">{title}</h2>
                 <p className="mt-4 text-[13px] sm:text-sm leading-relaxed text-slate-600">{description}</p>
               </div>
             </div>

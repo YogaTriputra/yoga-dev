@@ -14,7 +14,7 @@ const [activeTab, setActiveTab] = useState<"education" | "career">("education");
 const [hasSwitchedTab, setHasSwitchedTab] = useState(false);
 
 return (
-    <main className="relative flex min-h-screen flex-col items-center bg-[#bac5db] overflow-x-clip px-4 pb-[calc(7rem+env(safe-area-inset-bottom))] pt-20 lg:pb-16 text-slate-900 sm:pt-20 lg:pt-24">
+    <main className="relative flex min-h-screen flex-col items-center bg-[#bac5db] dark:bg-[#0f1d31] dark:text-[#f0eee9] overflow-x-clip px-4 pb-[calc(7rem+env(safe-area-inset-bottom))] pt-20 lg:pb-16 text-slate-900 sm:pt-20 lg:pt-24">
       {/* back button */}
     <Link
         href="/about"

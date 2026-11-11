@@ -100,7 +100,7 @@ function TechnologyLogo({ name }: { name: LogoName }) {
 
 function TechnologyBadge({ technology }: { technology: Technology }) {
     return (
-        <li className="flex min-w-0 items-center gap-4 rounded-2xl border border-[#587fba]/20 bg-white/70 px-5 py-4 text-[#3565a0] shadow-[0_4px_12px_rgba(53,101,160,0.05)] transition-[translate,background-color,box-shadow,border-color] duration-200 hover:-translate-y-0.5 hover:border-[#587fba]/40 hover:bg-blue-50/80 hover:shadow-[0_8px_20px_rgba(53,101,160,0.12)] motion-reduce:translate-none motion-reduce:transform-none motion-reduce:transition-none">
+        <li className="flex min-w-0 items-center gap-4 rounded-2xl border border-[#587fba]/20 bg-white/70 dark:bg-[#182b45] dark:border-[#38516f] px-5 py-4 text-[#3565a0] shadow-[0_4px_12px_rgba(53,101,160,0.05)] transition-[translate,background-color,box-shadow,border-color] duration-200 hover:-translate-y-0.5 hover:border-[#587fba]/40 hover:bg-blue-50/80 hover:shadow-[0_8px_20px_rgba(53,101,160,0.12)] motion-reduce:translate-none motion-reduce:transform-none motion-reduce:transition-none">
             <TechnologyLogo name={technology.logo} />
             <span className="min-w-0 break-words text-[13px] sm:text-sm font-semibold leading-relaxed text-slate-700">{technology.name}</span>
         </li>

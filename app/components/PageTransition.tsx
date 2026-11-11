@@ -102,7 +102,7 @@ export default function PageTransition({ children }: { children: ReactNode }) {
   const page = pages.find((item) => item.path === pathname);
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen bg-background text-foreground">
       {children}
       {!reduceMotion && page && (
         <motion.div

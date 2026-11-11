@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
 import { usePathname } from "next/navigation";
 import { House, UserRound, PanelsTopLeft, Mail } from "lucide-react";
 import { LayoutGroup, motion, useReducedMotion } from "motion/react";
@@ -28,14 +29,14 @@ export default function Navbar() {
       "/about/beyond-coding",
     ].includes(pathname)
   ) {
-    return null;
+    return <ThemeToggle floating />;
   }
 
   return (
     <LayoutGroup id="navigation-dock">
       <nav
         aria-label="Main navigation"
-        className="site-dock fixed bottom-[max(1rem,env(safe-area-inset-bottom))] left-1/2 z-50 flex w-[360px] max-w-[92vw] -translate-x-1/2 items-end justify-between gap-2 rounded-[1.75rem] border border-white/60 bg-[#e7edf6]/80 px-3 pb-1.5 pt-2 shadow-[0_12px_40px_-10px_rgba(25,50,85,0.35),inset_0_1px_0_rgba(255,255,255,0.8)] backdrop-blur-xl sm:w-[420px] sm:px-7"
+        className="site-dock fixed bottom-[max(1rem,env(safe-area-inset-bottom))] left-1/2 z-50 flex w-[380px] max-w-[calc(100vw-1rem)] -translate-x-1/2 items-end justify-between gap-1 rounded-[1.75rem] dark:border-[#38516f]/80 dark:bg-[#12243b]/90 dark:shadow-[0_12px_40px_-10px_rgba(0,0,0,0.6)] border border-white/60 bg-[#e7edf6]/80 px-3 pb-1.5 pt-2 shadow-[0_12px_40px_-10px_rgba(25,50,85,0.35),inset_0_1px_0_rgba(255,255,255,0.8)] backdrop-blur-xl sm:w-[420px] sm:px-7"
       >
         {menu.map(({ name, href, icon: Icon }) => {
           const isActive =
@@ -47,16 +48,16 @@ export default function Navbar() {
               href={href}
               aria-label={name}
               aria-current={isActive ? "page" : undefined}
-              className="group relative flex w-14 shrink-0 flex-col items-center gap-1.5 rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-[#3565a0] focus-visible:ring-offset-4 sm:w-16"
+              className="group relative flex w-12 shrink-0 flex-col items-center gap-1.5 rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-[#3565a0] focus-visible:ring-offset-4 sm:w-16"
             >
-              <span className="pointer-events-none absolute -top-12 left-1/2 -translate-x-1/2 translate-y-1 rounded-lg border border-white/60 bg-[#edf2fa]/95 px-3 py-1.5 text-xs font-semibold text-[#3565a0] opacity-0 shadow-md transition-[opacity,transform] duration-200 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 motion-reduce:transition-none">
+              <span className="pointer-events-none absolute -top-12 left-1/2 -translate-x-1/2 translate-y-1 rounded-lg border border-white/60 bg-[#edf2fa]/95 dark:border-[#38516f] dark:bg-[#1b304d] dark:text-[#a8c4e8] px-3 py-1.5 text-xs font-semibold text-[#3565a0] opacity-0 shadow-md transition-[opacity,transform] duration-200 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 motion-reduce:transition-none">
                 {name}
               </span>
               <motion.span
                 whileHover={reduceMotion ? undefined : { y: -6, scale: 1.08 }}
                 whileTap={reduceMotion ? undefined : { y: -2, scale: 0.94 }}
                 transition={spring}
-                className="relative flex h-11 w-11 items-center justify-center rounded-2xl border border-white/70 bg-white/55 shadow-sm"
+                className="relative flex h-11 w-11 items-center justify-center rounded-2xl border border-white/70 bg-white/55 shadow-sm dark:border-[#38516f] dark:bg-[#1b304d]"
               >
                 {isActive && (
                   <motion.span
@@ -66,7 +67,7 @@ export default function Navbar() {
                   />
                 )}
                 <Icon
-                  className={`relative z-10 h-6 w-6 transition-colors duration-300 motion-reduce:transition-none ${isActive ? "text-white" : "text-[#3565a0]"}`}
+                  className={`relative z-10 h-6 w-6 transition-colors duration-300 motion-reduce:transition-none ${isActive ? "text-white" : "text-[#3565a0] dark:text-[#a8c4e8]"}`}
                   strokeWidth={1.8}
                   aria-hidden="true"
                 />
@@ -83,6 +84,7 @@ export default function Navbar() {
             </Link>
           );
         })}
+        <ThemeToggle />
       </nav>
     </LayoutGroup>
   );

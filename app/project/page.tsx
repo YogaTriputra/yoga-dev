@@ -98,7 +98,7 @@ export default function ProjectPage() {
   return (
     <main className="min-h-screen">
       {/* SECTION 1: HEADER */}
-      <section className="flex min-h-screen items-center bg-blue-50 px-6 pt-20 pb-[calc(7rem+env(safe-area-inset-bottom))] text-[#3565a0] sm:px-8 lg:px-16 lg:py-0">
+      <section className="flex min-h-screen items-center bg-blue-50 dark:bg-[#0b1424] dark:text-[#a8c4e8] px-6 pt-20 pb-[calc(7rem+env(safe-area-inset-bottom))] text-[#3565a0] sm:px-8 lg:px-16 lg:py-0">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -133,7 +133,7 @@ export default function ProjectPage() {
       </section>
 
       {/* SECTION 2: CIRCULAR CAROUSEL & PROJECT DETAILS */}
-      <section className="relative flex min-h-screen w-full items-center bg-[#3565a0] px-6 pt-16 pb-[calc(7rem+env(safe-area-inset-bottom))] text-white sm:px-8 xl:px-16 xl:py-20 overflow-hidden">
+      <section className="relative flex min-h-screen w-full items-center bg-[#3565a0] dark:bg-[#12243b] px-6 pt-16 pb-[calc(7rem+env(safe-area-inset-bottom))] text-white sm:px-8 xl:px-16 xl:py-20 overflow-hidden">
         {/* busur lingkaran */}
         <div
           className="pointer-events-none absolute left-0 top-1/2 hidden items-center justify-center rounded-full xl:flex"
@@ -460,7 +460,7 @@ export default function ProjectPage() {
                 className="w-full min-w-0 max-w-[640px] justify-self-center"
               >
                 <div
-                  className="project-preview-float overflow-hidden rounded-2xl border border-white/30 bg-blue-50 shadow-[0_25px_45px_-15px_rgba(10,25,55,0.45)]"
+                  className="project-preview-float overflow-hidden rounded-2xl border border-white/30 bg-blue-50 dark:bg-[#182b45] dark:border-[#38516f] shadow-[0_25px_45px_-15px_rgba(10,25,55,0.45)]"
                 >
                   <div className="flex items-center gap-3 border-b border-[#3565a0]/10 px-4 py-3">
                     <div aria-hidden="true" className="flex gap-1.5">

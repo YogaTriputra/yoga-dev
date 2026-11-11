@@ -87,7 +87,7 @@ export default function EducationTimeline({ initialEntrance = false }: { initial
                   <span className="h-1.5 w-1.5 rounded-full bg-[#3565a0]" />
                 </span>
 
-                <div className="group relative overflow-hidden rounded-2xl border border-white/90 bg-white/65 px-5 py-4 shadow-[0_12px_30px_-16px_rgba(53,101,160,0.45)] backdrop-blur-xl transition-shadow hover:shadow-[0_18px_35px_-14px_rgba(53,101,160,0.5)]">
+                <div className="group relative overflow-hidden rounded-2xl border border-white/90 bg-white/65 dark:bg-[#182b45] dark:border-[#38516f] px-5 py-4 shadow-[0_12px_30px_-16px_rgba(53,101,160,0.45)] backdrop-blur-xl transition-shadow hover:shadow-[0_18px_35px_-14px_rgba(53,101,160,0.5)]">
                   <span className="absolute right-5 top-2 text-4xl font-black text-[#3565a0]/15">
                     {item.number}
                   </span>
