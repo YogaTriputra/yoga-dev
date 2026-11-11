@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function About() {
     return (
         <main className="min-h-screen bg-blue-50">
-            <section id="about" className="relative isolate mx-auto grid min-h-screen max-w-7xl grid-cols-1 items-center gap-12 overflow-hidden px-4 pb-12 pt-24 sm:px-8 lg:pb-8 lg:grid-cols-2 lg:gap-20">
+            <section id="about" className="relative isolate mx-auto grid min-h-screen max-w-7xl grid-cols-1 items-center gap-10 overflow-hidden px-6 pb-12 pt-16 sm:gap-12 sm:px-8 sm:pt-24 lg:pb-8 lg:grid-cols-2 lg:gap-20">
                 <div className="pointer-events-none absolute left-[46%] top-[44%] -z-10 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#3565a0]/10" />
                 <div className="pointer-events-none absolute left-[46%] top-[44%] -z-10 h-[390px] w-[390px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#3565a0]/15" />
                 <div className="pointer-events-none absolute left-[43%] top-[23%] -z-10 h-3 w-3 rounded-full bg-[#3565a0]/30 shadow-[0_0_24px_rgba(53,101,160,0.55)]" />
@@ -17,11 +17,11 @@ export default function About() {
                 </div>
 
             <div className="relative z-10 mx-auto w-full max-w-[540px]">
-                <h1 className="w-fit border-2 border-[#3565a0] px-4 py-2 rounded-2xl text-lg font-semibold text-[#3565a0] bg-white/60 backdrop-blur-sm">
+                <h1 className="w-fit border-2 border-[#3565a0] px-3 py-1.5 rounded-2xl text-xs sm:px-4 sm:py-2 sm:text-lg font-semibold text-[#3565a0] bg-white/60 backdrop-blur-sm">
                     About Me
                 </h1>
 
-                <h1 className="mt-4 text-4xl font-extrabold tracking-tight lg:text-5xl">
+                <h1 className="mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
                     Get to Know <br/> More <span className="text-[#3565a0]">About me</span>
                 </h1>
 
@@ -31,16 +31,16 @@ export default function About() {
                     <span className="rounded-full bg-[#3565a0] h-2 w-2.5"/>
                 </div>
 
-                <div className="mt-5 max-w-[480px] space-y-3 text-base leading-relaxed lg:text-lg">
+                <div className="mt-5 max-w-[480px] space-y-3 text-sm leading-relaxed sm:text-base lg:text-lg">
                     <p className="text-slate-700"> I&apos;m an informatics student who loves turning ideas into real, interactive, and user-friendly web experiences.</p>
 
                     <p className="text-slate-700"> I enjoy building clean and responsive interfaces, exploring new technologies, and solving problems through code.</p>
                 </div>
 
-                <div className="mt-5 space-y-2.5">
-                    <div className="flex items-center gap-4">
-                        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#dce4f3] text-[#3565a0] border border-blue-200/60 shadow-sm">
-                            <Coffee className="h-7 w-7"/>
+                <div className="mt-6 space-y-4 sm:mt-5 sm:space-y-2.5">
+                    <div className="flex items-center gap-3 sm:gap-4">
+                        <div className="flex h-10 w-10 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-xl bg-[#dce4f3] text-[#3565a0] border border-blue-200/60 shadow-sm">
+                            <Coffee className="h-5 w-5 sm:h-7 sm:w-7"/>
                         </div>
 
                         <div className="max-w-[400px]">
@@ -54,9 +54,9 @@ export default function About() {
                         </div>
                     </div>
 
-                    <div className="flex items-center gap-4">
-                        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#dce4f3] text-[#3565a0] border border-blue-200/60 shadow-sm">
-                            <Sprout className="h-7 w-7"/>
+                    <div className="flex items-center gap-3 sm:gap-4">
+                        <div className="flex h-10 w-10 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-xl bg-[#dce4f3] text-[#3565a0] border border-blue-200/60 shadow-sm">
+                            <Sprout className="h-5 w-5 sm:h-7 sm:w-7"/>
                         </div>
 
                         <div className="max-w-[400px]">
@@ -70,9 +70,9 @@ export default function About() {
                         </div>
                     </div>
 
-                    <div className="flex items-center gap-4">
-                        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#dce4f3] text-[#3565a0] border border-blue-200/60 shadow-sm">
-                            <Handshake className="h-7 w-7"/>
+                    <div className="flex items-center gap-3 sm:gap-4">
+                        <div className="flex h-10 w-10 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-xl bg-[#dce4f3] text-[#3565a0] border border-blue-200/60 shadow-sm">
+                            <Handshake className="h-5 w-5 sm:h-7 sm:w-7"/>
                         </div>
 
                         <div className="max-w-[400px]">

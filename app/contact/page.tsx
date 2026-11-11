@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { motion } from "motion/react";
 import { 
   Mail, 
@@ -14,12 +14,35 @@ import {
 
 export default function ContactPage() {
   const [copied, setCopied] = useState(false);
-  const email = "yogatriputra@example.com"; // Ganti dengan email aslimu
+  const email = "yogasetiatriputra@gmail.com";
+  const [feedback, setFeedback] = useState("");
 
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2500);
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    } catch {
+      setFeedback("Could not copy the address. You can use the email link instead.");
+    }
+  };
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    const name = String(form.get("name") ?? "").trim();
+    const sender = String(form.get("email") ?? "").trim();
+    const subject = String(form.get("subject") ?? "").trim();
+    const message = String(form.get("message") ?? "").trim();
+
+    if (!name || !sender || !subject || !message) {
+      setFeedback("Please complete every field before opening your email app.");
+      return;
+    }
+
+    const body = `${message}\n\nFrom: ${name}\nReply to: ${sender}`;
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setFeedback("Your email app will open with your message. Please press Send there. If it does not open, use the email link or copy the address.");
   };
 
   return (
@@ -48,7 +71,7 @@ export default function ContactPage() {
               Contact
             </div>
 
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-800 tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-800 tracking-tight leading-tight">
               Let&apos;s build <br />
               something <span className="text-[#3565a0]">great</span> together.
             </h1>
@@ -78,7 +101,7 @@ export default function ContactPage() {
                   </div>
                   <div className="min-w-0 text-left">
                     <p className="text-xs text-slate-500 font-medium">Email Me</p>
-                    <p className="break-all text-sm font-semibold text-slate-800">{email}</p>
+                    <a href={`mailto:${email}`} className="break-all text-sm font-semibold text-slate-800 underline-offset-4 hover:underline">{email}</a>
                   </div>
                 </div>
                 <button
@@ -144,7 +167,7 @@ export default function ContactPage() {
 
                     {/* Instagram */}
                     <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/yoggaaw._?psln=MXF0dGI3MjR4Zmd2bA=="
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
@@ -174,16 +197,21 @@ export default function ContactPage() {
                 Send a Message
               </h2>
               <p className="text-sm text-slate-500 mt-1 mb-6">
-                Isi form di bawah, saya akan merespon secepat mungkin.
+                Fill out the form to compose an email. You will send it from your email app.
               </p>
 
-              <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                    <label htmlFor="contact-name" className="block text-xs font-semibold text-slate-700 mb-1.5">
                       Your Name
                     </label>
                     <input
+                      id="contact-name"
+                      name="name"
+                      autoComplete="name"
+                      required
+                      maxLength={100}
                       type="text"
                       placeholder="e.g. Alex Pratama"
                       className="w-full rounded-xl border border-slate-200 bg-white/90 px-4 py-2.5 text-sm text-slate-800 placeholder-slate-400 outline-none focus:border-[#3565a0] focus:ring-4 focus:ring-[#3565a0]/10 transition-all"
@@ -191,10 +219,15 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                    <label htmlFor="contact-email" className="block text-xs font-semibold text-slate-700 mb-1.5">
                       Your Email
                     </label>
                     <input
+                      id="contact-email"
+                      name="email"
+                      autoComplete="email"
+                      required
+                      maxLength={254}
                       type="email"
                       placeholder="alex@example.com"
                       className="w-full rounded-xl border border-slate-200 bg-white/90 px-4 py-2.5 text-sm text-slate-800 placeholder-slate-400 outline-none focus:border-[#3565a0] focus:ring-4 focus:ring-[#3565a0]/10 transition-all"
@@ -203,10 +236,14 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                  <label htmlFor="contact-subject" className="block text-xs font-semibold text-slate-700 mb-1.5">
                     Subject / Topic
                   </label>
                   <input
+                    id="contact-subject"
+                    name="subject"
+                    required
+                    maxLength={150}
                     type="text"
                     placeholder="Project Inquiry / Just saying hi"
                     className="w-full rounded-xl border border-slate-200 bg-white/90 px-4 py-2.5 text-sm text-slate-800 placeholder-slate-400 outline-none focus:border-[#3565a0] focus:ring-4 focus:ring-[#3565a0]/10 transition-all"
@@ -214,12 +251,16 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                  <label htmlFor="contact-message" className="block text-xs font-semibold text-slate-700 mb-1.5">
                     Message
                   </label>
                   <textarea
+                    id="contact-message"
+                    name="message"
+                    required
+                    maxLength={3000}
                     rows={5}
-                    placeholder="Ceritakan detail kebutuhan atau project kamu..."
+                    placeholder="Tell me about your project or idea..."
                     className="w-full rounded-xl border border-slate-200 bg-white/90 px-4 py-2.5 text-sm text-slate-800 placeholder-slate-400 outline-none focus:border-[#3565a0] focus:ring-4 focus:ring-[#3565a0]/10 transition-all resize-none"
                   />
                 </div>
@@ -229,8 +270,9 @@ export default function ContactPage() {
                   className="w-full flex items-center justify-center gap-2 rounded-xl bg-[#3565a0] px-6 py-3 text-sm font-semibold text-white shadow-md shadow-[#3565a0]/20 hover:bg-[#2c5385] active:scale-[0.99] transition-all"
                 >
                   <Send className="w-4 h-4" />
-                  Send Message
+                  Open Email App
                 </button>
+                <p role="status" aria-live="polite" className="text-xs leading-relaxed text-slate-500">{feedback}</p>
               </form>
             </div>
           </motion.div>
