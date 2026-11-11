@@ -86,6 +86,8 @@ export default function Home() {
 
               <a
                 href="https://discord.com/users/530260710005932042"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Discord"
                 className="transition hover:scale-110 hover:text-white"
               >
@@ -105,8 +107,10 @@ export default function Home() {
               </a>
 
               <a
-                href="#"
-                aria-label="https://www.instagram.com/yoggaaw._?psln=MXF0dGI3MjR4Zmd2bA=="
+                href="https://www.instagram.com/yoggaaw._/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
                 className="transition hover:scale-110 hover:text-white"
               >
                 <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
