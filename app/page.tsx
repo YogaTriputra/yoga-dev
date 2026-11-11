@@ -7,7 +7,7 @@ export default function Home() {
     <main className="relative min-h-screen overflow-x-hidden">
       <section id="home" className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
         {/* LEFT SIDE */}
-        <div className="relative isolate flex flex-col justify-center overflow-hidden bg-[#587fba] px-6 pt-28 pb-16 sm:px-12 lg:px-14 lg:py-20 text-white min-h-screen">
+        <div className="relative isolate flex flex-col justify-center overflow-hidden bg-[#587fba] min-w-0 px-6 pt-20 pb-[calc(7rem+env(safe-area-inset-bottom))] sm:px-12 lg:px-14 lg:py-20 text-white min-h-screen">
           <div className="pointer-events-none absolute inset-0 z-0">
             <DotField
               dotRadius={2}
@@ -64,7 +64,8 @@ export default function Home() {
                 View my Works ↗
               </Link>
               <a
-                href="#myCV"
+                href="/yoga-setia-triputra-cv.pdf"
+                download="Yoga-Setia-Triputra-CV.pdf"
                 className="border-2 border-white bg-transparent px-4 py-2.5 sm:py-3 text-center font-bold text-white shadow-[4px_5px_0_#ffffff] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none hover:bg-white hover:text-slate-900 text-sm sm:text-base"
               >
                 Download CV ↗
@@ -119,7 +120,7 @@ export default function Home() {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="flex min-h-screen items-center bg-gradient-to-br from-white via-blue-50/40 to-slate-100/60 px-6 py-16 sm:px-12 md:px-16 lg:pt-28 lg:pb-16">
+        <div className="flex min-h-screen min-w-0 items-center bg-gradient-to-br from-white via-blue-50/40 to-slate-100/60 px-6 pt-16 pb-[calc(7rem+env(safe-area-inset-bottom))] sm:px-12 md:px-16 lg:pt-28 lg:pb-16">
           <div className="w-full max-w-2xl mx-auto">
             {/* Tagline */}
             <p className="text-xs font-bold uppercase tracking-wider text-[#3565a0] flex items-center gap-2">
@@ -142,7 +143,7 @@ export default function Home() {
             </p>
 
             {/* 3 Feature Cards */}
-            <div className="mt-8 sm:mt-10 grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-3">
+            <div className="mt-8 sm:mt-10 grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
               {/* Card 1: Clean Code */}
               <div className="rounded-xl border border-slate-800 bg-white/90 p-4 sm:p-5 shadow-[4px_4px_0_#1e293b] hover:-translate-y-1 hover:shadow-[6px_6px_0_#1e293b] transition-all">
                 <div className="mb-3 sm:mb-4 flex h-9 w-9 items-center justify-center rounded-lg bg-[#3565a0] text-xs font-bold text-white shadow-sm">

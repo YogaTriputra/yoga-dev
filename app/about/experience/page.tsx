@@ -1,51 +1,43 @@
-"use client";
+import { Code2, PanelsTopLeft, AppWindow } from "lucide-react";
+import SectionShell, { RevealCard } from "../SectionShell";
 
-import{ ArrowRight, ArrowLeft } from "lucide-react"
+const services = [
+  {
+    title: "Frontend Development",
+    icon: Code2,
+    description: "Building modern, responsive, and interactive websites that feel great on every screen.",
+    focus: "Responsive layouts · Clean code · Interaction",
+  },
+  {
+    title: "UI/UX Design",
+    icon: PanelsTopLeft,
+    description: "Designing appealing, intuitive interfaces that make everyday interactions clear and comfortable.",
+    focus: "Visual design · Prototyping · Usability",
+  },
+  {
+    title: "Web Application Development",
+    icon: AppWindow,
+    description: "Developing web applications with functional features and thoughtful experiences that put users first.",
+    focus: "Useful features · User flows · Web experiences",
+  },
+];
 
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { motion } from "motion/react";
-
-export default function WhatiDo() {
-    const router = useRouter();
-
-    return (
-        <main className="min-h-screen flex flex-col-2">
-
-        <Link
-        href="/about"
-        className="absolute left-6 top-6 z-30 inline-flex items-center gap-1.5 rounded-full bg-white/80 px-3.5 py-1.5 text-xs font-semibold text-[#3565a0] shadow-sm backdrop-blur-md transition-all hover:scale-105 hover:bg-white hover:shadow-md sm:left-10"
-    >
-        <ArrowLeft className="h-4 w-4" />
-        <span>Back to Overview</span>
-        </Link>
-
-            {/* Slider Controls (Bottom Floating Dots) */}
-    <div className="fixed bottom-5 left-1/2 z-40 flex -translate-x-1/2 items-center gap-4 rounded-full border border-white/70 bg-white/75 px-4 py-2 shadow-[0_8px_24px_rgba(53,101,160,0.16)] backdrop-blur-md">
-        <button
-            type="button"
-            onClick={() => router.push("/about/journey")}
-            className="flex h-7 w-7 items-center justify-center rounded-full bg-[#3565a0] text-white transition duration-200 hover:scale-105 hover:bg-[#28558f]"
-        >
-            <ArrowLeft className="h-4 w-4" />
-        </button>
-
-        <div className="flex items-center gap-2">
-            <button type="button" onClick={() => router.push("/about/introduction")} className="h-2 w-2 rounded-full bg-[#3565a0]/25 transition-all duration-300 hover:bg-[#3565a0]/60" aria-label="Slide 1 (Introduction)" />
-            <button type="button" className="h-2 w-6 rounded-full bg-[#3565a0] transition-all duration-300" aria-label="Slide 2 (Journey)" />
-            <button type="button" className="h-2 w-2 rounded-full bg-[#3565a0]/25 transition-all duration-300 hover:bg-[#3565a0]/60" aria-label="Slide 3" />
-            <button type="button" className="h-2 w-2 rounded-full bg-[#3565a0]/25 transition-all duration-300 hover:bg-[#3565a0]/60" aria-label="Slide 4" />
-            <button type="button" className="h-2 w-2 rounded-full bg-[#3565a0]/25 transition-all duration-300 hover:bg-[#3565a0]/60" aria-label="Slide 5" />
-        </div>
-
-        <button
-            type="button"
-            onClick={() => router.push("/about/ ")}
-            className="flex h-7 w-7 items-center justify-center rounded-full bg-[#3565a0] text-white transition duration-200 hover:scale-105 hover:bg-[#28558f]"
-        >
-            <ArrowRight className="h-4 w-4" />
-        </button>
-    </div>
-        </main>
-    )
-} 
+export default function WhatIDoPage() {
+  return (
+    <SectionShell number="03" title="What I Do" subtitle="What I Love to Build" description="Turning ideas into useful digital experiences, from the first interface sketch to the details that make a website feel right.">
+      <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3 xl:gap-10">
+        {services.map(({ title, icon: Icon, description, focus }, index) => (
+          <RevealCard key={title} index={index} className="flex h-full flex-col">
+            <div className="mb-7 flex items-center justify-between">
+              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3565a0] to-[#244975] text-white shadow-md shadow-blue-900/20"><Icon className="h-6 w-6" aria-hidden="true" /></span>
+              <span className="font-mono text-xs font-bold text-[#3565a0]/60">0{index + 1}</span>
+            </div>
+            <h2 className="text-xl font-bold leading-snug tracking-tight text-[#3565a0] sm:text-2xl">{title}</h2>
+            <p className="mb-8 mt-5 text-base leading-7 text-slate-600">{description}</p>
+            <p className="mt-auto border-t border-[#587fba]/15 pt-6 text-xs font-semibold leading-6 text-[#3565a0]">{focus}</p>
+          </RevealCard>
+        ))}
+      </div>
+    </SectionShell>
+  );
+}

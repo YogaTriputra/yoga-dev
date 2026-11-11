@@ -87,6 +87,33 @@ html {
   animation: orbit-line 5s linear infinite;
 }
 
+@keyframes project-preview-float {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -6px, 0); }
+}
+
+.project-preview-float {
+  animation: project-preview-float 8s ease-in-out infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.project-preview-float:hover,
+.project-preview-float:focus-within {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-preview-float {
+    animation: none;
+    will-change: auto;
+  }
+}
+
+html {
+  scroll-padding-bottom: 7rem;
+}
+
 html,
 body {
   overflow-x: hidden;

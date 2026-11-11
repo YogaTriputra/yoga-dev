@@ -11,9 +11,10 @@ import EducationTimeline from "./EducationTimeline";
 export default function JourneyPage() {
 const router = useRouter();
 const [activeTab, setActiveTab] = useState<"education" | "career">("education");
+const [hasSwitchedTab, setHasSwitchedTab] = useState(false);
 
 return (
-    <main className="relative flex min-h-screen flex-col items-center bg-[#bac5db] px-4 pb-16 pt-16 text-slate-900 sm:pt-20 lg:pt-24">
+    <main className="relative flex min-h-screen flex-col items-center bg-[#bac5db] overflow-x-clip px-4 pb-[calc(7rem+env(safe-area-inset-bottom))] pt-20 lg:pb-16 text-slate-900 sm:pt-20 lg:pt-24">
       {/* back button */}
     <Link
         href="/about"
@@ -25,10 +26,10 @@ return (
 
     <div className="w-full max-w-[1700px] px-2">
         {/* header section */}
-        <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
         <div className="space-y-6">
             <div className="flex items-center gap-4">
-            <div className="relative h-18 w-18 overflow-hidden rounded-full border-4 border-white bg-slate-200 shadow-[0_10px_30px_rgba(53,101,160,0.25)] sm:h-26 sm:w-26">
+            <div className="relative h-18 w-18 shrink-0 overflow-hidden rounded-full border-4 border-white bg-slate-200 shadow-[0_10px_30px_rgba(53,101,160,0.25)] sm:h-26 sm:w-26">
                 <Image
                 src="/reze.jpg"
                 alt="Yoga Setia Triputra"
@@ -57,8 +58,11 @@ return (
             <div className="flex w-fit items-center gap-1 rounded-full bg-[#dce2ed] p-1.5 shadow-sm">
             <button
                 type="button"
-                onClick={() => setActiveTab("education")}
-                className={`rounded-full px-6 py-1.5 text-xs font-extrabold tracking-wider transition-all ${
+                onClick={() => {
+                    if (activeTab !== "education") setHasSwitchedTab(true);
+                    setActiveTab("education");
+                }}
+                className={`rounded-full px-4 py-1.5 text-xs sm:px-6 font-extrabold tracking-wider transition-all ${
                 activeTab === "education"
                     ? "bg-[#3565a0] text-white shadow-md"
                     : "bg-white text-[#3565a0] hover:bg-white/80"
@@ -69,8 +73,11 @@ return (
 
             <button
                 type="button"
-                onClick={() => setActiveTab("career")}
-                className={`rounded-full px-6 py-1.5 text-xs font-extrabold tracking-wider transition-all ${
+                onClick={() => {
+                    if (activeTab !== "career") setHasSwitchedTab(true);
+                    setActiveTab("career");
+                }}
+                className={`rounded-full px-4 py-1.5 text-xs sm:px-6 font-extrabold tracking-wider transition-all ${
                 activeTab === "career"
                     ? "bg-[#3565a0] text-white shadow-md"
                     : "bg-white text-[#3565a0] hover:bg-white/80"
@@ -87,7 +94,7 @@ return (
                 <p className="text-xl font-semibold text-slate-800">about Me</p>
                 <span className="h-0.5 w-16 bg-slate-800" />
             </div>
-            <h2 className="mt-2 text-6xl font-black uppercase tracking-tight text-slate-800 text-left">
+            <h2 className="mt-2 text-4xl font-black sm:text-5xl lg:text-6xl uppercase tracking-tight text-slate-800 text-left">
                 MY <span className="text-[#3565a0]">JOURNEY</span> |
             </h2>
             <p className="text-xl text-slate-800 max-w-[400px]">
@@ -99,13 +106,13 @@ return (
 
         {/* Konten berdasarkan Tab */}
             {activeTab === "education" ? (
-                <EducationTimeline />
+                <EducationTimeline initialEntrance={!hasSwitchedTab} />
             ) : (
                 <CareerTimeline />
             )}
     </div>
 
-    <div className="fixed bottom-5 left-1/2 z-40 flex -translate-x-1/2 items-center gap-4 rounded-full border border-white/70 bg-white/75 px-4 py-2 shadow-[0_8px_24px_rgba(53,101,160,0.16)] backdrop-blur-md">
+    <div className="fixed bottom-[calc(1.25rem+env(safe-area-inset-bottom))] lg:bottom-5 left-1/2 z-40 flex -translate-x-1/2 items-center gap-4 rounded-full border border-white/70 bg-white/75 px-4 py-2 shadow-[0_8px_24px_rgba(53,101,160,0.16)] backdrop-blur-md">
         <button
             type="button"
             onClick={() => router.push("/about/introduction")}

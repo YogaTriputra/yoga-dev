@@ -41,7 +41,7 @@ const educationItems = [
   },
 ];
 
-export default function EducationTimeline() {
+export default function EducationTimeline({ initialEntrance = false }: { initialEntrance?: boolean }) {
   return (
     <motion.section
       initial={{ opacity: 0, y: 24 }}
@@ -73,7 +73,7 @@ export default function EducationTimeline() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{
                   duration: 0.5,
-                  delay: 0.12 + index * 0.12,
+                  delay: initialEntrance ? index * 0.05 : 0.12 + index * 0.12,
                   ease: [0.22, 1, 0.36, 1],
                 }}
                 whileHover={{ x: 6, scale: 1.01 }}
@@ -92,7 +92,7 @@ export default function EducationTimeline() {
                     {item.number}
                   </span>
 
-                  <div className="flex items-start gap-4 pr-10">
+                  <div className="flex flex-col items-start gap-4 sm:flex-row sm:pr-10">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#dce4f3] text-[#3565a0] shadow-sm transition-transform duration-300 group-hover:-rotate-3 group-hover:scale-105">
                       <Icon className="h-6 w-6" />
                     </div>
@@ -118,7 +118,7 @@ export default function EducationTimeline() {
         <motion.aside
           initial={{ opacity: 0, x: 32 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, delay: initialEntrance ? 0.05 : 0.25, ease: [0.22, 1, 0.36, 1] }}
           className="relative flex min-h-[390px] flex-col justify-between overflow-hidden rounded-3xl bg-gradient-to-br from-[#3565a0] to-[#244975] p-7 text-white shadow-[0_20px_45px_-18px_rgba(15,23,42,0.65)]"
         >
           <div className="pointer-events-none absolute -right-28 -top-28 h-72 w-72 rounded-full border border-white/15" />
@@ -159,7 +159,7 @@ export default function EducationTimeline() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.65 }}
+        transition={{ duration: 0.5, delay: initialEntrance ? 0.1 : 0.65 }}
         className="mt-5 flex items-center gap-4 text-xs font-medium text-slate-600"
       >
         <Quote className="h-7 w-7 shrink-0 rotate-180 text-[#3565a0]" />

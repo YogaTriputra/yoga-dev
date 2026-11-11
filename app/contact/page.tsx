@@ -23,7 +23,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="relative min-h-screen bg-blue-50 overflow-hidden pt-24 pb-16 px-6 sm:px-10">
+    <main className="relative min-h-screen bg-blue-50 overflow-hidden pt-16 pb-[calc(7rem+env(safe-area-inset-bottom))] px-4 sm:px-10 lg:pt-24 lg:pb-16">
       {/* Background Ornaments (Konsisten dengan About page) */}
       <div className="pointer-events-none absolute left-1/2 top-1/3 -z-10 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#3565a0]/10" />
       <div className="pointer-events-none absolute left-1/2 top-1/3 -z-10 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#3565a0]/15" />
@@ -34,14 +34,14 @@ export default function ContactPage() {
       </div>
 
       <div className="mx-auto max-w-6xl">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 xl:gap-x-16 items-center">
           
           {/* SISI KIRI: Direct Info & Socials */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-5 space-y-6"
+            className="min-w-0 lg:col-span-5 space-y-6"
           >
             <div className="inline-flex items-center gap-2 border-2 border-[#3565a0] px-4 py-1.5 rounded-2xl text-sm font-semibold text-[#3565a0] bg-white/70 backdrop-blur-sm shadow-sm">
               <Sparkles className="w-4 h-4" />
@@ -71,14 +71,14 @@ export default function ContactPage() {
             {/* Contact Items */}
             <div className="space-y-3 pt-2">
               {/* Copy Email Box */}
-              <div className="flex items-center justify-between p-3.5 rounded-2xl bg-white/70 border border-blue-100/80 shadow-sm">
-                <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center justify-between gap-3 p-3.5 rounded-2xl bg-white/70 border border-blue-100/80 shadow-sm">
+                <div className="flex min-w-0 items-center gap-3">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#dce4f3] text-[#3565a0]">
                     <Mail className="h-5 w-5" />
                   </div>
-                  <div className="text-left">
+                  <div className="min-w-0 text-left">
                     <p className="text-xs text-slate-500 font-medium">Email Me</p>
-                    <p className="text-sm font-semibold text-slate-800">{email}</p>
+                    <p className="break-all text-sm font-semibold text-slate-800">{email}</p>
                   </div>
                 </div>
                 <button
@@ -166,9 +166,9 @@ export default function ContactPage() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-7"
+            className="min-w-0 lg:col-span-7"
           >
-            <div className="rounded-3xl border border-white/60 bg-white/80 p-6 sm:p-10 shadow-xl shadow-blue-900/5 backdrop-blur-md">
+            <div className="rounded-3xl border border-white/60 bg-white/80 p-4 sm:p-10 shadow-xl shadow-blue-900/5 backdrop-blur-md">
               <h2 className="text-2xl font-bold text-slate-800 flex items-center gap-2">
                 <MessageSquare className="w-6 h-6 text-[#3565a0]" />
                 Send a Message

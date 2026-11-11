@@ -23,7 +23,7 @@ export default function IntroductionPage() {
   const router = useRouter();
 
   return (
-    <main className="relative h-screen bg-gradient-to-br from-[#f0f4f9] via-[#e5ecf5] to-[#d9e4f2] px-4 py-8 sm:px-8 lg:py-10 text-slate-800 flex flex-col items-center justify-center overflow-hidden">
+    <main className="relative min-h-screen bg-gradient-to-br from-[#f0f4f9] via-[#e5ecf5] to-[#d9e4f2] px-4 pt-24 pb-[calc(7rem+env(safe-area-inset-bottom))] sm:px-8 lg:h-screen lg:py-10 text-slate-800 flex flex-col items-center justify-start lg:justify-center overflow-x-clip lg:overflow-hidden">
       {/* Background Glows */}
       <div className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-[#3565a0]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-[#587fba]/20 blur-3xl" />
@@ -33,7 +33,7 @@ export default function IntroductionPage() {
       <motion.div
         initial={{ opacity: 0, x: -24 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.45, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.4, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
         className="absolute left-6 top-6 z-30 sm:left-10"
       >
       <Link
@@ -95,7 +95,7 @@ export default function IntroductionPage() {
         <motion.div
           initial={{ opacity: 0, x: -45 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.45, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
           className="flex flex-col gap-8 lg:col-span-3.5 lg:gap-10 xl:col-span-3"
         >
           {/* CARD 1: Education (Top Left) */}
@@ -167,8 +167,8 @@ export default function IntroductionPage() {
         <motion.div
           initial={{ opacity: 0, y: 35, scale: 0.94 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.65, delay: 0.38, ease: [0.22, 1, 0.36, 1] }}
-          className="my-6 flex flex-col items-center text-center lg:col-span-5 lg:my-0 lg:px-6 xl:col-span-6"
+          transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          className="order-first my-6 min-w-0 flex flex-col items-center text-center lg:order-none lg:col-span-5 lg:my-0 lg:px-6 xl:col-span-6"
         >
           <div className="relative mb-4 flex items-center justify-center">
             {/* Outer dotted node ring */}
@@ -222,7 +222,7 @@ export default function IntroductionPage() {
         <motion.div
           initial={{ opacity: 0, x: 45 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.46, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.45, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           className="flex flex-col gap-8 lg:col-span-3.5 lg:gap-10 xl:col-span-3"
         >
           {/* CARD 2: Skills & Focus (Top Right) */}
@@ -306,8 +306,8 @@ export default function IntroductionPage() {
       <motion.div
         initial={{ opacity: 0, y: 20, x: "-50%" }}
         animate={{ opacity: 1, y: 0, x: "-50%" }}
-        transition={{ duration: 0.45, delay: 0.65, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed bottom-5 left-1/2 z-40 flex items-center gap-4 rounded-full border border-white/70 bg-white/75 px-4 py-2 shadow-[0_8px_24px_rgba(53,101,160,0.16)] backdrop-blur-md"
+        transition={{ duration: 0.4, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+        className="fixed bottom-[calc(1.25rem+env(safe-area-inset-bottom))] lg:bottom-5 left-1/2 z-40 flex items-center gap-4 rounded-full border border-white/70 bg-white/75 px-4 py-2 shadow-[0_8px_24px_rgba(53,101,160,0.16)] backdrop-blur-md"
       >
         <button
           type="button"

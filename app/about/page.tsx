@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function About() {
     return (
         <main className="min-h-screen bg-blue-50">
-            <section id="about" className="relative isolate mx-auto grid min-h-screen max-w-7xl grid-cols-1 items-center gap-12 overflow-hidden px-8 pb-8 pt-24 lg:grid-cols-2 lg:gap-20">
+            <section id="about" className="relative isolate mx-auto grid min-h-screen max-w-7xl grid-cols-1 items-center gap-12 overflow-hidden px-4 pb-12 pt-24 sm:px-8 lg:pb-8 lg:grid-cols-2 lg:gap-20">
                 <div className="pointer-events-none absolute left-[46%] top-[44%] -z-10 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#3565a0]/10" />
                 <div className="pointer-events-none absolute left-[46%] top-[44%] -z-10 h-[390px] w-[390px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#3565a0]/15" />
                 <div className="pointer-events-none absolute left-[43%] top-[23%] -z-10 h-3 w-3 rounded-full bg-[#3565a0]/30 shadow-[0_0_24px_rgba(53,101,160,0.55)]" />
@@ -88,7 +88,7 @@ export default function About() {
                 </div>
             </div>
             
-            <div className="relative mx-auto self-center">
+            <div className="relative mx-auto w-full max-w-[350px] self-center sm:max-w-[380px] lg:w-auto lg:max-w-none">
                 <div className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full border-[10px] border-[#3565a0]/10" />
                 <div className="pointer-events-none absolute -bottom-7 -left-7 h-28 w-28 border-b-4 border-l-4 border-[#3565a0]/35" />
                 <div className="pointer-events-none absolute -left-12 top-1/3 flex flex-col gap-2">
@@ -97,7 +97,7 @@ export default function About() {
                     <span className="h-2 w-2 rounded-full bg-[#3565a0]/20" />
                 </div>
 
-                <div className="relative h-[440px] w-[350px] overflow-hidden rounded-3xl border-4 border-white shadow-[0_20px_45px_-10px_rgba(53,101,160,0.22)] ring-1 ring-blue-900/10 transition-all duration-300 group hover:shadow-2xl sm:h-[480px] sm:w-[380px] lg:h-[520px] lg:w-[410px]">
+                <div className="relative h-[440px] w-full overflow-hidden rounded-3xl border-4 border-white shadow-[0_20px_45px_-10px_rgba(53,101,160,0.22)] ring-1 ring-blue-900/10 transition-all duration-300 group hover:shadow-2xl sm:h-[480px] sm:w-[380px] lg:h-[520px] lg:w-[410px]">
                     <Image
                     src="/reje.jpg"
                     alt="Foto Yoga about"
@@ -109,7 +109,7 @@ export default function About() {
             </div>
             </section>
 
-            <section className="relative isolate grid min-h-screen grid-cols-2 items-center overflow-hidden bg-[#3565a0] px-10">
+            <section className="relative isolate grid min-h-screen grid-cols-1 items-center gap-12 overflow-hidden bg-[#3565a0] px-4 py-16 sm:px-10 lg:grid-cols-2 lg:gap-0 lg:py-0">
                 <div className="pointer-events-none absolute -left-44 top-1/2 -z-10 h-[520px] w-[520px] -translate-y-1/2 rounded-full border-[34px] border-white/5" />
                 <div className="pointer-events-none absolute -right-36 -top-32 -z-10 h-[420px] w-[420px] rounded-full border border-white/15" />
                 <div className="pointer-events-none absolute right-[36%] top-0 -z-10 h-full w-32 -skew-x-12 bg-white/[0.035]" />
@@ -127,12 +127,12 @@ export default function About() {
                     02
                 </div>
 
-                <div className="mx-auto flex min-h-screen w-full max-w-[600px] flex-col justify-center">
+                <div className="mx-auto flex w-full min-w-0 max-w-[600px] flex-col justify-center lg:min-h-screen">
                     <h1 className="text-2xl font-semibold text-white">
                         Discover my Portofolio
                     </h1>
 
-                    <h1 className="mt-5 text-6xl font-extrabold text-white">
+                    <h1 className="mt-5 text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl">
                         Discover More <br/> <span className="inline-block rounded-2xl px-3 py-2 bg-white text-[#3565a0] mt-3">About Me</span>
                     </h1>                    <p className="mt-6 max-w-[460px] text-lg leading-relaxed text-white">
 
@@ -142,23 +142,23 @@ export default function About() {
                 </div>
 
                 {/* bagian kanan */}
-                <div className="mr-auto w-full max-w-xl space-y-12">
-                    <div className="flex items-center gap-5">
+                <div className="mx-auto w-full min-w-0 max-w-xl space-y-8 lg:ml-0 lg:mr-auto lg:space-y-12">
+                    <div className="flex items-center gap-2 sm:gap-5">
                         <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full shadow-[-4px_4px_0_#111827] bg-white text-lg font-bold text-black">
                             1
                         </span>
 
-                        <Link href="/about/introduction" className="flex flex-1 items-center border-l-8 border-slate-900 bg-white px-4 py-4 text-slate-900 shadow-[0_5px_0_#111827] transition hover:translate-x-1 hover:bg-blue-900 hover:text-white">
-                            <span className="mr-3 flex h-9 w-9 shrink-0 items-center justify-center bg-[#3565a0] text-white">
+                        <Link href="/about/introduction" className="flex min-w-0 flex-1 items-center border-l-8 border-slate-900 bg-white px-2 py-4 sm:px-4 text-slate-900 shadow-[0_5px_0_#111827] transition hover:translate-x-1 hover:bg-blue-900 hover:text-white">
+                            <span className="mr-2 flex h-7 w-7 sm:mr-3 sm:h-9 sm:w-9 shrink-0 items-center justify-center bg-[#3565a0] text-white">
                                 <Star className="h-5 w-5"/>
                             </span>
 
-                            <span className="flex-1">
-                                <span className="block text-lg font-extrabold uppercase leading-none">
+                            <span className="min-w-0 flex-1">
+                                <span className="block break-words text-sm font-extrabold uppercase leading-tight sm:text-lg sm:leading-none">
                                     Introduction
                                 </span>
 
-                                <span className="mt-1 block text-xs leading-none">
+                                <span className="mt-1 block text-xs leading-snug sm:leading-none">
                                     Get to Know Better
                                 </span>
                             </span>
@@ -167,22 +167,22 @@ export default function About() {
                         </Link>
                     </div>
 
-                    <div className="flex items-center gap-5">
+                    <div className="flex items-center gap-2 sm:gap-5">
                         <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full shadow-[-4px_4px_0_#111827] bg-white text-lg font-bold text-black">
                             2
                         </span>
 
-                        <Link href="/about/journey" className="flex flex-1 items-center border-l-8 border-slate-900 bg-white px-4 py-4 text-slate-900 shadow-[0_5px_0_#111827] transition hover:translate-x-1 hover:bg-blue-900 hover:text-white">
-                            <span className="mr-3 flex h-9 w-9 shrink-0 items-center justify-center bg-[#3565a0] text-white">
+                        <Link href="/about/journey" className="flex min-w-0 flex-1 items-center border-l-8 border-slate-900 bg-white px-2 py-4 sm:px-4 text-slate-900 shadow-[0_5px_0_#111827] transition hover:translate-x-1 hover:bg-blue-900 hover:text-white">
+                            <span className="mr-2 flex h-7 w-7 sm:mr-3 sm:h-9 sm:w-9 shrink-0 items-center justify-center bg-[#3565a0] text-white">
                                 <Star className="h-5 w-5"/>
                             </span>
 
-                            <span className="flex-1">
-                                <span className="block text-lg font-extrabold uppercase leading-none">
+                            <span className="min-w-0 flex-1">
+                                <span className="block break-words text-sm font-extrabold uppercase leading-tight sm:text-lg sm:leading-none">
                                     My Journew
                                 </span>
 
-                                <span className="mt-1 block text-xs leading-none">
+                                <span className="mt-1 block text-xs leading-snug sm:leading-none">
                                     My path and experience
                                 </span>
                             </span>
@@ -191,22 +191,22 @@ export default function About() {
                         </Link>
                     </div>
 
-                    <div className="flex items-center gap-5">
+                    <div className="flex items-center gap-2 sm:gap-5">
                         <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full shadow-[-4px_4px_0_#111827] bg-white text-lg font-bold text-black">
                             3
                         </span>
 
-                        <Link href="/about/experience" className="flex flex-1 items-center border-l-8 border-slate-900 bg-white px-4 py-4 text-slate-900 shadow-[0_5px_0_#111827] transition hover:translate-x-1 hover:bg-blue-900 hover:text-white">
-                            <span className="mr-3 flex h-9 w-9 shrink-0 items-center justify-center bg-[#3565a0] text-white">
+                        <Link href="/about/experience" className="flex min-w-0 flex-1 items-center border-l-8 border-slate-900 bg-white px-2 py-4 sm:px-4 text-slate-900 shadow-[0_5px_0_#111827] transition hover:translate-x-1 hover:bg-blue-900 hover:text-white">
+                            <span className="mr-2 flex h-7 w-7 sm:mr-3 sm:h-9 sm:w-9 shrink-0 items-center justify-center bg-[#3565a0] text-white">
                                 <Star className="h-5 w-5"/>
                             </span>
 
-                            <span className="flex-1">
-                                <span className="block text-lg font-extrabold uppercase leading-none">
+                            <span className="min-w-0 flex-1">
+                                <span className="block break-words text-sm font-extrabold uppercase leading-tight sm:text-lg sm:leading-none">
                                     What I Do
                                 </span>
 
-                                <span className="mt-1 block text-xs leading-none">
+                                <span className="mt-1 block text-xs leading-snug sm:leading-none">
                                     What I Love to Build
                                 </span>
                             </span>
@@ -215,52 +215,52 @@ export default function About() {
                         </Link>
                     </div>
 
-                    <div className="flex items-center gap-5">
+                    <div className="flex items-center gap-2 sm:gap-5">
                         <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full shadow-[-4px_4px_0_#111827] bg-white text-lg font-bold text-black">
                             4
                         </span>
 
-                        <a href="#experience" className="flex flex-1 items-center border-l-8 border-slate-900 bg-white px-4 py-4 text-slate-900 shadow-[0_5px_0_#111827] transition hover:translate-x-1 hover:bg-blue-900 hover:text-white">
-                            <span className="mr-3 flex h-9 w-9 shrink-0 items-center justify-center bg-[#3565a0] text-white">
+                        <Link href="/about/tech-stack" className="flex min-w-0 flex-1 items-center border-l-8 border-slate-900 bg-white px-2 py-4 sm:px-4 text-slate-900 shadow-[0_5px_0_#111827] transition hover:translate-x-1 hover:bg-blue-900 hover:text-white">
+                            <span className="mr-2 flex h-7 w-7 sm:mr-3 sm:h-9 sm:w-9 shrink-0 items-center justify-center bg-[#3565a0] text-white">
                                 <Star className="h-5 w-5"/>
                             </span>
 
-                            <span className="flex-1">
-                                <span className="block text-lg font-extrabold uppercase leading-none">
+                            <span className="min-w-0 flex-1">
+                                <span className="block break-words text-sm font-extrabold uppercase leading-tight sm:text-lg sm:leading-none">
                                     Tech Stack
                                 </span>
 
-                                <span className="mt-1 block text-xs leading-none">
+                                <span className="mt-1 block text-xs leading-snug sm:leading-none">
                                     Technologies I Use
                                 </span>
                             </span>
 
                             <ArrowRight className="h-6 w-6 shrink-0"/>
-                        </a>
+                        </Link>
                     </div>
 
-                    <div className="flex items-center gap-5">
+                    <div className="flex items-center gap-2 sm:gap-5">
                         <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full shadow-[-4px_4px_0_#111827] bg-white text-lg font-bold text-black">
                             5
                         </span>
 
-                        <a href="#experience" className="flex flex-1 items-center border-l-8 border-slate-900 bg-white px-4 py-4 text-slate-900 shadow-[0_5px_0_#111827] transition hover:translate-x-1 hover:bg-blue-900 hover:text-white">
-                            <span className="mr-3 flex h-9 w-9 shrink-0 items-center justify-center bg-[#3565a0] text-white">
+                        <Link href="/about/beyond-coding" className="flex min-w-0 flex-1 items-center border-l-8 border-slate-900 bg-white px-2 py-4 sm:px-4 text-slate-900 shadow-[0_5px_0_#111827] transition hover:translate-x-1 hover:bg-blue-900 hover:text-white">
+                            <span className="mr-2 flex h-7 w-7 sm:mr-3 sm:h-9 sm:w-9 shrink-0 items-center justify-center bg-[#3565a0] text-white">
                                 <Star className="h-5 w-5"/>
                             </span>
 
-                            <span className="flex-1">
-                                <span className="block text-lg font-extrabold uppercase leading-none">
+                            <span className="min-w-0 flex-1">
+                                <span className="block break-words text-sm font-extrabold uppercase leading-tight sm:text-lg sm:leading-none">
                                     Beyond Coding
                                 </span>
 
-                                <span className="mt-1 block text-xs leading-none">
+                                <span className="mt-1 block text-xs leading-snug sm:leading-none">
                                     Passions And Interest
                                 </span>
                             </span>
 
                             <ArrowRight className="h-6 w-6 shrink-0"/>
-                        </a>
+                        </Link>
                     </div>
                 </div>
 

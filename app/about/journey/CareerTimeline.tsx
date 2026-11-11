@@ -97,7 +97,7 @@ export default function CareerTimeline() {
                     {item.number}
                   </span>
 
-                  <div className="flex items-start gap-4 pr-10">
+                  <div className="flex flex-col items-start gap-4 sm:flex-row sm:pr-10">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#dce4f3] text-[#3565a0] shadow-sm transition-transform duration-300 group-hover:-rotate-3 group-hover:scale-105">
                       <Icon className="h-6 w-6" />
                     </div>

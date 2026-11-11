@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkles, ChevronUp, ChevronDown } from "lucide-react";
+import { Sparkles, ChevronUp, ChevronDown, ArrowUpRight } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -10,6 +10,7 @@ interface ProjectItem {
   category: string;
   description: string;
   tags?: string[];
+  liveUrl?: string;
 }
 
 const projects: ProjectItem[] = [
@@ -32,10 +33,11 @@ const projects: ProjectItem[] = [
   {
     number: "03",
     title: "NeoRain",
-    category: "Creative Interface",
+    category: "Mental Health Platform",
     description:
-      "Deskripsi singkat mengenai project 03. Kembangkan konten ini sesuai kebutuhan desain Anda.",
-    tags: ["UI/UX Design", "Motion", "TypeScript"],
+      "NeoRain adalah aplikasi web kesehatan mental yang saya buat untuk membantu pengguna memantau dan mengevaluasi kondisi mental mereka, dengan dukungan AI dan analisis untuk memahami kesehatan mental secara lebih mendalam.",
+    tags: ["Mental Health", "AI", "Web App"],
+    liveUrl: "https://neorain.vercel.app/",
   },
   {
     number: "04",
@@ -48,7 +50,7 @@ const projects: ProjectItem[] = [
 ];
 
 export default function ProjectPage() {
-  const [activeNumber, setActiveNumber] = useState("01");
+  const [activeNumber, setActiveNumber] = useState("03");
   const [direction, setDirection] = useState(1);
   const radius = 260;
   const visibleAngles = [0, 52, 180, -52];
@@ -96,7 +98,7 @@ export default function ProjectPage() {
   return (
     <main className="min-h-screen">
       {/* SECTION 1: HEADER */}
-      <section className="flex min-h-screen items-center bg-blue-50 px-8 text-[#3565a0] lg:px-16">
+      <section className="flex min-h-screen items-center bg-blue-50 px-6 pt-20 pb-[calc(7rem+env(safe-area-inset-bottom))] text-[#3565a0] sm:px-8 lg:px-16 lg:py-0">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -131,10 +133,10 @@ export default function ProjectPage() {
       </section>
 
       {/* SECTION 2: CIRCULAR CAROUSEL & PROJECT DETAILS */}
-      <section className="relative flex min-h-screen w-full items-center bg-[#3565a0] px-8 py-20 text-white lg:px-16 overflow-hidden">
+      <section className="relative flex min-h-screen w-full items-center bg-[#3565a0] px-6 pt-16 pb-[calc(7rem+env(safe-area-inset-bottom))] text-white sm:px-8 xl:px-16 xl:py-20 overflow-hidden">
         {/* busur lingkaran */}
         <div
-          className="pointer-events-none absolute left-0 top-1/2 flex items-center justify-center rounded-full"
+          className="pointer-events-none absolute left-0 top-1/2 hidden items-center justify-center rounded-full xl:flex"
           style={{
             width: radius * 2,
             height: radius * 2,
@@ -205,10 +207,15 @@ export default function ProjectPage() {
             const isVisible = relativeIndex !== 2;
 
             return (
-              <div
+              <button
                 key={item.number}
+                type="button"
                 onClick={() => selectProject(index)}
-                className="pointer-events-auto absolute flex cursor-pointer items-center gap-3 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group"
+                aria-label={`${item.number}: ${item.title}`}
+                aria-pressed={isActive}
+                aria-hidden={!isVisible}
+                tabIndex={isVisible ? 0 : -1}
+                className="pointer-events-auto absolute flex cursor-pointer items-center gap-3 rounded-full transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white group"
                 style={{
                   left: `calc(50% + ${x}px)`,
                   top: `calc(50% + ${y}px)`,
@@ -236,13 +243,32 @@ export default function ProjectPage() {
                 >
                   {item.number}
                 </span>
-              </div>
+              </button>
             );
           })}
         </div>
 
         {/* ⚪ KONTEN DETAIL PROJECT DENGAN ANIMASI TEKS */}
-        <div className="relative z-10 ml-44 sm:ml-56 md:ml-64 lg:ml-72 max-w-xl min-h-[260px] flex flex-col justify-center">
+        <div className="relative z-10 grid min-w-0 flex-1 items-center gap-10 xl:ml-56 xl:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] xl:gap-12">
+          <nav aria-label="Select project" className="flex min-w-0 gap-3 overflow-x-auto p-1 xl:hidden">
+            {projects.map((project, index) => (
+              <button
+                key={project.number}
+                type="button"
+                onClick={() => selectProject(index)}
+                aria-label={`${project.number}: ${project.title}`}
+                aria-pressed={project.number === activeNumber}
+                className={`flex h-12 min-w-12 shrink-0 items-center justify-center rounded-full border text-sm font-bold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
+                  project.number === activeNumber
+                    ? "border-white bg-white text-[#3565a0]"
+                    : "border-white/30 bg-white/10 text-white hover:bg-white/20"
+                }`}
+              >
+                {project.number}
+              </button>
+            ))}
+          </nav>
+          <div className="relative flex min-h-[260px] min-w-0 flex-col justify-center">
           {/* Subtle background number watermark */}
           <div className="pointer-events-none absolute -left-8 -top-12 select-none overflow-hidden opacity-[0.06]">
             <AnimatePresence mode="wait" custom={direction}>
@@ -401,7 +427,7 @@ export default function ProjectPage() {
           </AnimatePresence>
 
           {/* Quick navigation controls */}
-          <div className="mt-8 flex items-center gap-3">
+          <div className="mt-8 hidden items-center gap-3 xl:flex">
             <button
               type="button"
               onClick={prevProject}
@@ -422,6 +448,53 @@ export default function ProjectPage() {
               Gunakan panah &uarr;&darr; atau klik nomor
             </span>
           </div>
+          </div>
+          <AnimatePresence mode="wait">
+            {currentProject.liveUrl && (
+              <motion.div
+                key={currentProject.liveUrl}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.4 }}
+                className="w-full min-w-0 max-w-[640px] justify-self-center"
+              >
+                <div
+                  className="project-preview-float overflow-hidden rounded-2xl border border-white/30 bg-blue-50 shadow-[0_25px_45px_-15px_rgba(10,25,55,0.45)]"
+                >
+                  <div className="flex items-center gap-3 border-b border-[#3565a0]/10 px-4 py-3">
+                    <div aria-hidden="true" className="flex gap-1.5">
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#3565a0]/30" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#3565a0]/20" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#3565a0]/10" />
+                    </div>
+                    <span className="truncate text-[10px] tracking-wide text-[#3565a0]/70">
+                      {new URL(currentProject.liveUrl).hostname}
+                    </span>
+                  </div>
+                  <div className="relative aspect-[4/3] overflow-hidden bg-slate-950">
+                    <iframe
+                      src={currentProject.liveUrl}
+                      title={`${currentProject.title} live preview`}
+                      loading="lazy"
+                      sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+                      referrerPolicy="no-referrer"
+                      className="absolute inset-0 h-[200%] w-[200%] origin-top-left scale-50 border-0"
+                    />
+                  </div>
+                </div>
+                <a
+                  href={currentProject.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group mt-5 flex min-h-11 items-center justify-between gap-4 border-b border-white/25 pb-3 text-sm font-medium text-white/90 transition-colors hover:border-white hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                >
+                  Explore live site
+                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </a>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </section>
     </main>
