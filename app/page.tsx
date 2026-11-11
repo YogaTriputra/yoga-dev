@@ -85,7 +85,7 @@ export default function Home() {
               </a>
 
               <a
-                href="#"
+                href="https://discord.com/users/530260710005932042"
                 aria-label="Discord"
                 className="transition hover:scale-110 hover:text-white"
               >
@@ -106,7 +106,7 @@ export default function Home() {
 
               <a
                 href="#"
-                aria-label="Instagram"
+                aria-label="https://www.instagram.com/yoggaaw._?psln=MXF0dGI3MjR4Zmd2bA=="
                 className="transition hover:scale-110 hover:text-white"
               >
                 <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
