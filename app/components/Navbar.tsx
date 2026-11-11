@@ -84,8 +84,8 @@ export default function Navbar() {
             </Link>
           );
         })}
-        <ThemeToggle />
       </nav>
+      <ThemeToggle floating />
     </LayoutGroup>
   );
 }
