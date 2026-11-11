@@ -91,13 +91,13 @@ return (
         {/* section kanan */}
         <div className="flex flex-col gap-2">
             <div className="flex items-center gap-3">
-                <p className="text-xl font-semibold text-slate-800">about Me</p>
+                <p className="text-base font-semibold text-slate-800">about Me</p>
                 <span className="h-0.5 w-16 bg-slate-800" />
             </div>
-            <h2 className="mt-2 text-4xl font-black sm:text-5xl lg:text-6xl uppercase tracking-tight text-slate-800 text-left">
+            <h2 className="mt-2 text-[28px] font-black sm:text-4xl lg:text-5xl uppercase tracking-tight text-slate-800 text-left">
                 MY <span className="text-[#3565a0]">JOURNEY</span> |
             </h2>
-            <p className="text-xl text-slate-800 max-w-[400px]">
+            <p className="text-sm sm:text-base leading-relaxed text-slate-800 max-w-[400px]">
                 A path of learning, exploring, and becoming 
                 a better version of myself
             </p>

@@ -110,13 +110,13 @@ export default function IntroductionPage() {
               <MoreHorizontal className="h-5 w-5 text-slate-400 group-hover:text-slate-600" />
             </div>
 
-            <h2 className="mt-4 text-lg font-bold text-[#3565a0]">
+            <h2 className="mt-4 text-base font-bold text-[#3565a0]">
               Education
             </h2>
             <div className="my-2.5 h-0.5 w-7 rounded-full bg-[#3565a0]" />
 
             <div className="mt-4 space-y-1">
-              <p className="text-sm font-bold text-slate-800 sm:text-base">
+              <p className="text-[13px] font-bold text-slate-800 sm:text-sm">
                 Informatics Student
               </p>
               <p className="text-xs font-semibold text-[#3565a0] sm:text-sm">
@@ -142,14 +142,14 @@ export default function IntroductionPage() {
               <MoreHorizontal className="h-5 w-5 text-slate-400 group-hover:text-slate-600" />
             </div>
 
-            <h2 className="mt-4 text-lg font-bold text-[#3565a0]">
+            <h2 className="mt-4 text-base font-bold text-[#3565a0]">
               Projects
             </h2>
             <div className="my-2.5 h-0.5 w-7 rounded-full bg-[#3565a0]" />
 
             <div className="mt-4 flex items-center justify-between">
               <div>
-                <p className="text-3xl font-extrabold text-[#3565a0]">
+                <p className="text-2xl font-extrabold text-[#3565a0]">
                   10+
                 </p>
                 <p className="mt-1 text-xs font-semibold text-slate-600">
@@ -195,7 +195,7 @@ export default function IntroductionPage() {
           </div>
 
           {/* Profile Text Content */}
-          <h1 className="mt-2 text-2xl sm:text-3xl font-extrabold tracking-tight text-[#3565a0]">
+          <h1 className="mt-2 text-2xl sm:text-[28px] font-extrabold tracking-tight text-[#3565a0]">
             Yoga Setia Triputra
           </h1>
 
@@ -237,7 +237,7 @@ export default function IntroductionPage() {
               <MoreHorizontal className="h-5 w-5 text-slate-400 group-hover:text-slate-600" />
             </div>
 
-            <h2 className="mt-4 text-lg font-bold text-[#3565a0]">
+            <h2 className="mt-4 text-base font-bold text-[#3565a0]">
               Skills &amp; Focus
             </h2>
             <div className="my-2.5 h-0.5 w-7 rounded-full bg-[#3565a0]" />
@@ -274,7 +274,7 @@ export default function IntroductionPage() {
               <MoreHorizontal className="h-5 w-5 text-slate-400 group-hover:text-slate-600" />
             </div>
 
-            <h2 className="mt-4 text-lg font-bold text-[#3565a0]">
+            <h2 className="mt-4 text-base font-bold text-[#3565a0]">
               Interests
             </h2>
             <div className="my-2.5 h-0.5 w-7 rounded-full bg-[#3565a0]" />

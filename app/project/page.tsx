@@ -112,19 +112,19 @@ export default function ProjectPage() {
           </div>
 
           <div className="mt-7 flex flex-wrap items-center gap-6">
-            <h1 className="text-6xl font-black uppercase leading-none tracking-tight lg:text-8xl">
+            <h1 className="text-5xl font-black uppercase leading-none tracking-tight sm:text-6xl lg:text-7xl">
               Project
             </h1>
 
             <span className="hidden h-20 w-px bg-[#3565a0] sm:block" />
 
-            <p className="text-xl font-bold leading-tight text-slate-700 lg:text-2xl">
+            <p className="text-lg font-bold leading-tight text-slate-700 lg:text-xl">
               Things <br /> I&apos;ve Built
             </p>
 
             <div className="mt-5 h-0.5 w-16 bg-slate-700" />
 
-            <p className="mt-6 max-w-md text-base leading-7 text-slate-700 lg:text-lg">
+            <p className="mt-6 max-w-md text-[13px] leading-relaxed text-slate-700 sm:text-sm lg:text-base">
               A collection of projects I&apos;ve built, designed, and explored
               throughout my journey as an Informatics student.
             </p>
@@ -371,7 +371,7 @@ export default function ProjectPage() {
                       },
                     }),
                   }}
-                  className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight"
+                  className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight"
                 >
                   {currentProject.title}
                 </motion.h2>
@@ -394,7 +394,7 @@ export default function ProjectPage() {
                   },
                   exit: { opacity: 0, transition: { duration: 0.15 } },
                 }}
-                className="mt-4 text-sm sm:text-base md:text-lg leading-relaxed text-white/80 max-w-lg"
+                className="mt-4 text-[13px] sm:text-sm md:text-base leading-relaxed text-white/80 max-w-lg"
               >
                 {currentProject.description}
               </motion.p>

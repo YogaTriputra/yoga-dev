@@ -131,10 +131,10 @@ export default function PageTransition({ children }: { children: ReactNode }) {
             className="absolute inset-0 flex items-center justify-center px-7"
           >
             <div className="flex w-full max-w-3xl items-center gap-5 sm:gap-9">
-              <span className="text-7xl font-black italic leading-none tracking-tighter text-[#a8c4e8] sm:text-[140px]">{page.number}</span>
+              <span className="text-6xl font-black italic leading-none tracking-tighter text-[#a8c4e8] sm:text-[120px]">{page.number}</span>
               <div className="min-w-0 border-l-2 border-white/40 pl-5 sm:pl-9">
                 <p className="mb-3 text-[9px] font-bold uppercase tracking-[0.22em] text-[#c6daf2] sm:text-xs">{page.label}</p>
-                <p className="text-3xl font-black uppercase italic leading-none tracking-tight text-white sm:text-6xl">{page.title}</p>
+                <p className="text-[26px] font-black uppercase italic leading-none tracking-tight text-white sm:text-4xl lg:text-5xl">{page.title}</p>
                 <div className="mt-5 flex items-center gap-2">
                   <span className="h-1 w-10 bg-white" />
                   <span className="h-1 w-3 bg-[#a8c4e8]" />

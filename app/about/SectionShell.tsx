@@ -67,9 +67,9 @@ export default function SectionShell({ number, title, subtitle, description, chi
             <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/90 bg-white/70 text-xs shadow-[0_4px_12px_rgba(53,101,160,0.12)]">{number}</span>
             {title}
           </div>
-          <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-[#3565a0] sm:text-4xl lg:text-5xl">{subtitle}</h1>
+          <h1 className="text-[28px] font-extrabold leading-tight tracking-tight text-[#3565a0] sm:text-3xl lg:text-4xl">{subtitle}</h1>
           <div className="my-6 h-1 w-10 rounded-full bg-[#3565a0]" />
-          <p className="max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">{description}</p>
+          <p className="max-w-2xl text-[13px] leading-relaxed text-slate-600 sm:text-sm lg:text-base">{description}</p>
         </motion.header>
         {children}
       </div>

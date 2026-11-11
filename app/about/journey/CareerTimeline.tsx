@@ -55,7 +55,7 @@ export default function CareerTimeline() {
       className="mt-7 pb-20"
     >
       <div className="flex items-center gap-4">
-        <h3 className="text-2xl font-black tracking-tight text-slate-900 lg:text-3xl">
+        <h3 className="text-xl font-black tracking-tight text-slate-900 lg:text-2xl">
           CAREER
         </h3>
         <span className="hidden text-[10px] font-bold uppercase tracking-[0.35em] text-[#3565a0] sm:block">
@@ -103,7 +103,7 @@ export default function CareerTimeline() {
                     </div>
 
                     <div>
-                      <h4 className="text-base font-extrabold text-slate-800 lg:text-lg">
+                      <h4 className="text-sm font-extrabold text-slate-800 lg:text-base">
                         {item.title}
                       </h4>
                       <p className="mt-0.5 text-xs font-bold text-[#3565a0]">
@@ -171,7 +171,7 @@ export default function CareerTimeline() {
           </div>
 
           <div>
-            <p className="text-4xl font-black leading-tight">
+            <p className="text-3xl font-black leading-tight">
               Learn.
               <br />
               Build.

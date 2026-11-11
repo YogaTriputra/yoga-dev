@@ -71,12 +71,12 @@ export default function ContactPage() {
               Contact
             </div>
 
-            <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-800 tracking-tight leading-tight">
+            <h1 className="text-[28px] sm:text-4xl font-extrabold text-slate-800 tracking-tight leading-tight">
               Let&apos;s build <br />
               something <span className="text-[#3565a0]">great</span> together.
             </h1>
 
-            <p className="text-slate-600 text-base leading-relaxed">
+            <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">
               Punya ide project, tawaran kolaborasi, atau sekadar ingin berdiskusi seputar frontend development? Pintu saya selalu terbuka!
             </p>
 
@@ -192,11 +192,11 @@ export default function ContactPage() {
             className="min-w-0 lg:col-span-7"
           >
             <div className="rounded-3xl border border-white/60 bg-white/80 p-4 sm:p-10 shadow-xl shadow-blue-900/5 backdrop-blur-md">
-              <h2 className="text-2xl font-bold text-slate-800 flex items-center gap-2">
+              <h2 className="text-xl font-bold text-slate-800 flex items-center gap-2">
                 <MessageSquare className="w-6 h-6 text-[#3565a0]" />
                 Send a Message
               </h2>
-              <p className="text-sm text-slate-500 mt-1 mb-6">
+              <p className="text-[13px] sm:text-sm text-slate-500 mt-1 mb-6">
                 Fill out the form to compose an email. You will send it from your email app.
               </p>
 

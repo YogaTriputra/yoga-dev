@@ -17,11 +17,11 @@ export default function About() {
                 </div>
 
             <div className="relative z-10 mx-auto w-full max-w-[540px]">
-                <h1 className="w-fit border-2 border-[#3565a0] px-3 py-1.5 rounded-2xl text-xs sm:px-4 sm:py-2 sm:text-lg font-semibold text-[#3565a0] bg-white/60 backdrop-blur-sm">
+                <h1 className="w-fit border-2 border-[#3565a0] px-3 py-1.5 rounded-2xl text-xs sm:px-4 sm:py-2 sm:text-base font-semibold text-[#3565a0] bg-white/60 backdrop-blur-sm">
                     About Me
                 </h1>
 
-                <h1 className="mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
+                <h1 className="mt-4 text-[28px] font-extrabold tracking-tight sm:text-3xl lg:text-4xl">
                     Get to Know <br/> More <span className="text-[#3565a0]">About me</span>
                 </h1>
 
@@ -31,7 +31,7 @@ export default function About() {
                     <span className="rounded-full bg-[#3565a0] h-2 w-2.5"/>
                 </div>
 
-                <div className="mt-5 max-w-[480px] space-y-3 text-sm leading-relaxed sm:text-base lg:text-lg">
+                <div className="mt-5 max-w-[480px] space-y-3 text-[13px] leading-relaxed sm:text-sm lg:text-base">
                     <p className="text-slate-700"> I&apos;m an informatics student who loves turning ideas into real, interactive, and user-friendly web experiences.</p>
 
                     <p className="text-slate-700"> I enjoy building clean and responsive interfaces, exploring new technologies, and solving problems through code.</p>
@@ -44,7 +44,7 @@ export default function About() {
                         </div>
 
                         <div className="max-w-[400px]">
-                            <h2 className="text-base font-bold lg:text-lg text-slate-700">
+                            <h2 className="text-sm font-bold lg:text-base text-slate-700">
                                 Coffee &amp; Code
                             </h2>
 
@@ -60,7 +60,7 @@ export default function About() {
                         </div>
 
                         <div className="max-w-[400px]">
-                            <h2 className="text-base font-bold lg:text-lg text-slate-700">
+                            <h2 className="text-sm font-bold lg:text-base text-slate-700">
                                 Keep Growing
                             </h2>
 
@@ -76,7 +76,7 @@ export default function About() {
                         </div>
 
                         <div className="max-w-[400px]">
-                            <h2 className="text-base font-bold lg:text-lg text-slate-700">
+                            <h2 className="text-sm font-bold lg:text-base text-slate-700">
                                 Open to Collaboration
                             </h2>
 
@@ -128,13 +128,13 @@ export default function About() {
                 </div>
 
                 <div className="mx-auto flex w-full min-w-0 max-w-[600px] flex-col justify-center lg:min-h-screen">
-                    <h1 className="text-2xl font-semibold text-white">
+                    <h1 className="text-lg font-semibold text-white">
                         Discover my Portofolio
                     </h1>
 
-                    <h1 className="mt-5 text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl">
+                    <h1 className="mt-5 text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
                         Discover More <br/> <span className="inline-block rounded-2xl px-3 py-2 bg-white text-[#3565a0] mt-3">About Me</span>
-                    </h1>                    <p className="mt-6 max-w-[460px] text-lg leading-relaxed text-white">
+                    </h1>                    <p className="mt-6 max-w-[460px] text-sm sm:text-base leading-relaxed text-white">
 
 
                         Each section opens a new story about my journey, skills, and passions.
@@ -154,7 +154,7 @@ export default function About() {
                             </span>
 
                             <span className="min-w-0 flex-1">
-                                <span className="block break-words text-sm font-extrabold uppercase leading-tight sm:text-lg sm:leading-none">
+                                <span className="block break-words text-sm font-extrabold uppercase leading-tight sm:text-base sm:leading-none">
                                     Introduction
                                 </span>
 
@@ -178,7 +178,7 @@ export default function About() {
                             </span>
 
                             <span className="min-w-0 flex-1">
-                                <span className="block break-words text-sm font-extrabold uppercase leading-tight sm:text-lg sm:leading-none">
+                                <span className="block break-words text-sm font-extrabold uppercase leading-tight sm:text-base sm:leading-none">
                                     My Journew
                                 </span>
 
@@ -202,7 +202,7 @@ export default function About() {
                             </span>
 
                             <span className="min-w-0 flex-1">
-                                <span className="block break-words text-sm font-extrabold uppercase leading-tight sm:text-lg sm:leading-none">
+                                <span className="block break-words text-sm font-extrabold uppercase leading-tight sm:text-base sm:leading-none">
                                     What I Do
                                 </span>
 
@@ -226,7 +226,7 @@ export default function About() {
                             </span>
 
                             <span className="min-w-0 flex-1">
-                                <span className="block break-words text-sm font-extrabold uppercase leading-tight sm:text-lg sm:leading-none">
+                                <span className="block break-words text-sm font-extrabold uppercase leading-tight sm:text-base sm:leading-none">
                                     Tech Stack
                                 </span>
 
@@ -250,7 +250,7 @@ export default function About() {
                             </span>
 
                             <span className="min-w-0 flex-1">
-                                <span className="block break-words text-sm font-extrabold uppercase leading-tight sm:text-lg sm:leading-none">
+                                <span className="block break-words text-sm font-extrabold uppercase leading-tight sm:text-base sm:leading-none">
                                     Beyond Coding
                                 </span>
 

@@ -102,7 +102,7 @@ function TechnologyBadge({ technology }: { technology: Technology }) {
     return (
         <li className="flex min-w-0 items-center gap-4 rounded-2xl border border-[#587fba]/20 bg-white/70 px-5 py-4 text-[#3565a0] shadow-[0_4px_12px_rgba(53,101,160,0.05)] transition-[translate,background-color,box-shadow,border-color] duration-200 hover:-translate-y-0.5 hover:border-[#587fba]/40 hover:bg-blue-50/80 hover:shadow-[0_8px_20px_rgba(53,101,160,0.12)] motion-reduce:translate-none motion-reduce:transform-none motion-reduce:transition-none">
             <TechnologyLogo name={technology.logo} />
-            <span className="min-w-0 break-words text-sm font-semibold leading-relaxed text-slate-700">{technology.name}</span>
+            <span className="min-w-0 break-words text-[13px] sm:text-sm font-semibold leading-relaxed text-slate-700">{technology.name}</span>
         </li>
     );
 }
@@ -121,8 +121,8 @@ export default function TechStackPage() {
                         <section aria-labelledby={`technology-group-${index}`} className="flex h-full flex-col">
                             <div className="mb-7 flex items-start justify-between gap-4 border-b border-[#587fba]/15 pb-6">
                                 <div className="min-w-0 max-lg:break-words">
-                                    <h2 id={`technology-group-${index}`} className="text-xl font-bold tracking-tight text-[#3565a0] sm:text-2xl">{group.title}</h2>
-                                    <p className="mt-3 max-w-sm text-sm leading-7 text-slate-600">{group.description}</p>
+                                    <h2 id={`technology-group-${index}`} className="text-lg font-bold tracking-tight text-[#3565a0] sm:text-xl">{group.title}</h2>
+                                    <p className="mt-3 max-w-sm text-[13px] sm:text-sm leading-relaxed text-slate-600">{group.description}</p>
                                 </div>
                                 <span aria-hidden="true" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3565a0] to-[#244975] font-mono text-xs font-semibold text-white shadow-md shadow-blue-900/20">
                                     {String(index + 1).padStart(2, "0")}

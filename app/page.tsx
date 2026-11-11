@@ -38,18 +38,18 @@ export default function Home() {
               </div>
             </div>
 
-            <p className="text-base sm:text-lg lg:text-xl font-semibold text-white/90 tracking-wide text-center sm:text-left">
+            <p className="text-[13px] sm:text-sm lg:text-lg font-semibold text-white/90 tracking-wide text-center sm:text-left">
               Frontend Developer
             </p>
 
-            <h1 className="mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight leading-tight text-center sm:text-left">
+            <h1 className="mt-2 text-[28px] sm:text-3xl md:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight leading-tight text-center sm:text-left">
               Hi! I&apos;m{" "}
               <span className="text-[#c3cae5] drop-shadow-sm">Yoga</span>
               <br />
               Setia Triputra
             </h1>
 
-            <p className="mt-4 sm:mt-5 max-w-[560px] text-sm sm:text-base md:text-lg leading-relaxed text-white/90 text-center sm:text-left">
+            <p className="mt-4 sm:mt-5 max-w-[560px] text-[13px] sm:text-sm md:text-base leading-relaxed text-white/90 text-center sm:text-left">
               Informatics student focused on frontend development.
               I create responsive, accessible, and visually appealing
               web applications with React and Tailwind CSS.
@@ -59,14 +59,14 @@ export default function Home() {
             <div className="mt-6 sm:mt-8 gap-3 sm:gap-4 flex flex-col sm:flex-row flex-wrap justify-center sm:justify-start">
               <Link
                 href="/project"
-                className="border-2 border-white bg-[#f0eee9] px-4 py-2.5 sm:py-3 text-center font-bold text-slate-900 shadow-[4px_5px_0_#111827] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none hover:bg-blue-400 hover:text-white text-sm sm:text-base"
+                className="border-2 border-white bg-[#f0eee9] px-4 py-2.5 sm:py-3 text-center font-bold text-slate-900 shadow-[4px_5px_0_#111827] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none hover:bg-blue-400 hover:text-white text-[13px] sm:text-sm"
               >
                 View my Works ↗
               </Link>
               <a
                 href="/yoga-setia-triputra-cv.pdf"
                 download="Yoga-Setia-Triputra-CV.pdf"
-                className="border-2 border-white bg-transparent px-4 py-2.5 sm:py-3 text-center font-bold text-white shadow-[4px_5px_0_#ffffff] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none hover:bg-white hover:text-slate-900 text-sm sm:text-base"
+                className="border-2 border-white bg-transparent px-4 py-2.5 sm:py-3 text-center font-bold text-white shadow-[4px_5px_0_#ffffff] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none hover:bg-white hover:text-slate-900 text-[13px] sm:text-sm"
               >
                 Download CV ↗
               </a>
@@ -85,7 +85,7 @@ export default function Home() {
               </a>
 
               <a
-                href="https://discord.com/users/530260710005932042"
+                href="https://discord.gg/9g9H54Q5"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Discord"
@@ -133,7 +133,7 @@ export default function Home() {
             </p>
 
             {/* Heading */}
-            <h2 className="mt-3 sm:mt-4 text-2xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-slate-900">
+            <h2 className="mt-3 sm:mt-4 text-xl sm:text-3xl lg:text-4xl font-extrabold leading-tight text-slate-900">
               I turn ideas into{" "}
               <span className="relative inline-block text-[#3565a0] underline underline-offset-4 decoration-[#3565a0] decoration-4">
                 digital solutions.
@@ -141,7 +141,7 @@ export default function Home() {
             </h2>
 
             {/* Paragraph */}
-            <p className="mt-4 sm:mt-5 max-w-lg text-sm sm:text-base md:text-lg leading-relaxed text-slate-700">
+            <p className="mt-4 sm:mt-5 max-w-lg text-[13px] sm:text-sm md:text-base leading-relaxed text-slate-700">
               Passionate about solving problems through code and creating
               impactful digital experiences.
             </p>
@@ -153,7 +153,7 @@ export default function Home() {
                 <div className="mb-3 sm:mb-4 flex h-9 w-9 items-center justify-center rounded-lg bg-[#3565a0] text-xs font-bold text-white shadow-sm">
                   &lt;/&gt;
                 </div>
-                <h3 className="font-bold text-slate-900 text-sm sm:text-base">Clean Code</h3>
+                <h3 className="font-bold text-slate-900 text-[13px] sm:text-sm">Clean Code</h3>
                 <p className="mt-1.5 sm:mt-2 text-xs leading-5 text-slate-600">
                   Writing clean, maintainable, and scalable code.
                 </p>
@@ -166,7 +166,7 @@ export default function Home() {
                     <path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10c1.38 0 2.5-1.12 2.5-2.5 0-.61-.23-1.17-.64-1.59-.4-.4-.61-.96-.61-1.59 0-1.24 1.01-2.25 2.25-2.25H17c2.76 0 5-2.24 5-5 0-4.96-4.49-9-10-9zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 8 6.5 8s1.5.67 1.5 1.5S7.33 11 6.5 11zm3-4c-.83 0-1.5-.67-1.5-1.5S8.67 4 9.5 4s1.5.67 1.5 1.5S10.33 7 9.5 7zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 4 14.5 4s1.5.67 1.5 1.5S15.33 7 14.5 7zm3 4c-.83 0-1.5-.67-1.5-1.5S17.5 8 17.5 8s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
                   </svg>
                 </div>
-                <h3 className="font-bold text-slate-900 text-sm sm:text-base">UI/UX Focused</h3>
+                <h3 className="font-bold text-slate-900 text-[13px] sm:text-sm">UI/UX Focused</h3>
                 <p className="mt-1.5 sm:mt-2 text-xs leading-5 text-slate-600">
                   Designing with users in mind and attention to detail.
                 </p>
@@ -180,7 +180,7 @@ export default function Home() {
                     <path d="M12 14l-4 4v3l3-1 1-2 2-1 3-3-5-3z" />
                   </svg>
                 </div>
-                <h3 className="font-bold text-slate-900 text-sm sm:text-base">Performance</h3>
+                <h3 className="font-bold text-slate-900 text-[13px] sm:text-sm">Performance</h3>
                 <p className="mt-1.5 sm:mt-2 text-xs leading-5 text-slate-600">
                   Building fast and optimized web applications.
                 </p>

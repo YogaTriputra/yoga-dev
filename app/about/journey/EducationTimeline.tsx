@@ -50,7 +50,7 @@ export default function EducationTimeline({ initialEntrance = false }: { initial
       className="mt-7 pb-20"
     >
       <div className="flex items-center gap-4">
-        <h3 className="text-2xl font-black tracking-tight text-slate-900 lg:text-3xl">
+        <h3 className="text-xl font-black tracking-tight text-slate-900 lg:text-2xl">
           EDUCATION
         </h3>
         <span className="hidden text-[10px] font-bold uppercase tracking-[0.35em] text-[#3565a0] sm:block">
@@ -98,7 +98,7 @@ export default function EducationTimeline({ initialEntrance = false }: { initial
                     </div>
 
                     <div>
-                      <h4 className="text-base font-extrabold text-slate-800 lg:text-lg">
+                      <h4 className="text-sm font-extrabold text-slate-800 lg:text-base">
                         {item.title}
                       </h4>
                       <p className="mt-0.5 text-xs font-bold text-[#3565a0]">
@@ -136,7 +136,7 @@ export default function EducationTimeline({ initialEntrance = false }: { initial
             <div className="mt-5 h-px w-9 bg-white/45" />
           </div>
 
-          <p className="relative z-10 text-xl font-medium leading-tight text-white/80">
+          <p className="relative z-10 text-lg font-medium leading-tight text-white/80">
             Same mindset.
             <br />
             <span className="font-bold text-[#b9d3f3]">New horizons.</span>
